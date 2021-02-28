@@ -5,13 +5,13 @@ module FullAdder(x,y,z,s,c);
     assign c = ( x&y ) | ( x&z ) | ( y&z );
 endmodule
 
-module lab1_3 (
+module adder_subtractor (
     input signed [2:0] a, b;
     input m;
     output signed [2:0] s;
     output v;
-    wire [2:0]temp;
-    wire [3:0]carry;
+    wire [2:0] temp;
+    wire [3:0] carry;
 );
     assign temp[0] = b[0] ^ m;
     assign temp[1] = b[1] ^ m;

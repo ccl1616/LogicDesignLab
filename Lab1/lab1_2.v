@@ -6,15 +6,15 @@ module HalfAdder(a,b,sum,carry);
 endmodule
 
 module lab1_2(
-    input a1,a0,b1,b0;
-    output c3,c2,c1,c0;
+    input [1:0] a,b;
+    output [3:0] c;
     wire [2:0]temp;
     wire carry;
 );
-    assign c0 = a0 & b0;
-    assign temp[0] = a1 & b0;
-    assign temp[1] = a0 & b1;
-    assign temp[2] = a1 & b1;
-    HalfAdder h1(temp[0],temp[1],c1,carry);
-    HalfAdder h2(temp[2],carry,c2,c3);
+    assign c[0] = a[0] & b[0];
+    assign temp[0] = a[1] & b[0];
+    assign temp[1] = a[0] & b[1];
+    assign temp[2] = a[1] & b[1];
+    HalfAdder h1(temp[0],temp[1],c[1],carry);
+    HalfAdder h2(temp[2],carry,c[2],c[3]);
 endmodule
