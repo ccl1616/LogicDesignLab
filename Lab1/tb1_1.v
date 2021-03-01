@@ -14,11 +14,6 @@ lab1_1 t(
     .z(z) 
 );
 
-assign w = a | (b&c) | (b&d);
-assign x = ( b&(~c)&(~d) ) | ( (~b)&(d|c) );
-assign y = ( (~c)&(~d) ) | (c&d);
-assign z = (~d);
-
 initial begin
     {a,b,c,d} = 4'b0;
     #10;
