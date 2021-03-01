@@ -18,6 +18,6 @@ module adder_subtractor (
     assign temp[2] = b[2] ^ m;
     FullAdder f1(m,a[0],temp[0],s[0],carry[0]);
     FullAdder f2(carry[0],a[1],temp[1],s[1],carry[1]);   
-    FullAdder f2(carry[1],a[2],temp[2],s[2],carry[2]);   
+    FullAdder f3(carry[1],a[2],temp[2],s[2],carry[2]);   
     assign v = carry[2] ^ carry[1];
 endmodule
