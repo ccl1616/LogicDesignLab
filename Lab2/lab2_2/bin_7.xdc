@@ -1,3 +1,13 @@
+# Four anode control signals
+set_property PACKAGE_PIN W4 [get_ports {ssd_ctl[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ssd_ctl[3]}]
+set_property PACKAGE_PIN V4 [get_ports {ssd_ctl[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ssd_ctl[2]}]
+set_property PACKAGE_PIN U4 [get_ports {ssd_ctl[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ssd_ctl[1]}]
+set_property PACKAGE_PIN U2 [get_ports {ssd_ctl[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ssd_ctl[0]}]
+
 #4-bit binary input
 set_property PACKAGE_PIN W17 [get_ports {bin[3]}]
     set_property IOSTANDARD LVCMOS33 [get_ports {bin[3]}]
@@ -29,11 +39,11 @@ set_property PACKAGE_PIN V7 [get_ports {seg[0]}]
 
 #led right-to-left
 # 4 led output zyxw
-set_property PACKAGE_PIN U16 [get_ports {d[0]}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {d[0]}]
-set_property PACKAGE_PIN E19 [get_ports {d[1]}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {d[1]}]
-set_property PACKAGE_PIN U19 [get_ports {d[2]}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {d[2]}]
-set_property PACKAGE_PIN V19 [get_ports {d[3]}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {d[3]}]
+set_property PACKAGE_PIN U16 [get_ports {led[0]}]                    
+    set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
+set_property PACKAGE_PIN E19 [get_ports {led[1]}]                    
+    set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property PACKAGE_PIN U19 [get_ports {led[2]}]                    
+    set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+set_property PACKAGE_PIN V19 [get_ports {led[3]}]                    
+    set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
