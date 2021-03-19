@@ -1,4 +1,4 @@
-`define FREQ_BIT 3;
+`define FREQ_BIT 3
 module tb;
 
 wire [`FREQ_BIT-1 : 0] q;

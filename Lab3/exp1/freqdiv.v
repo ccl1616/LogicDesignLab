@@ -4,7 +4,7 @@
 module freqdiv(
     clk_out,
     clk,
-    rst_n;
+    rst_n
 );
 
 output clk_out; //devided output
