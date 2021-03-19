@@ -1,7 +1,7 @@
 // build a counter for 50M
 // and generate 1Hz signal by 100M/(2*50M) = 1Hz
 
-// divide 5 only
+// divide 5 only!! [todo]
 `define FREQ_BIT 3
 module freqdiv_50(
     q,
