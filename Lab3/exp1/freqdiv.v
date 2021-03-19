@@ -17,7 +17,7 @@ reg [`FREQ_BIT-1 : 0] cnt_tmp; //input to DFF, 26:0
 
 // combinational
 always @*
-    cnt_temp = {clk_out, cnt} + 1'b1;
+    cnt_tmp = {clk_out, cnt} + 1'b1;
 
 // sequential
 always @(posedge clk or negedge rst_n)
