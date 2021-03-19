@@ -1,6 +1,6 @@
 // 8 shift register cascade by DFF
 // initial val = 1001_0110
-
+`define BIT_WIDTH 8
 module shift(
     q,
     clk,
