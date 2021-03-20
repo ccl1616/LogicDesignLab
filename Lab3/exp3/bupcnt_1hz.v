@@ -23,7 +23,7 @@ freqdiv_50 U0(
 bincnt U1(
     .q(q),
     .clk(clk_div),
-    rst_n(rst_n)
+    .rst_n(rst_n)
 );
 
 endmodule
