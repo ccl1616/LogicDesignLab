@@ -1,9 +1,7 @@
-/*
+
 `define FREQ_BIT 26
 `define CYC_C 50000000
-*/
-`define FREQ_BIT 13
-`define CYC_C 5000
+
 
 module tb;
 
