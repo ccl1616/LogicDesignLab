@@ -11,7 +11,7 @@ input clk;
 input rst_n;
 
 wire clk_div;
-wire [`CNT_BIT_WIDTH-1 : 0]q;
+wire [`BIT_WIDTH-1 : 0]q;
 
 freqdiv_50 U0(
     .ans(clk_div), // divided clock
@@ -22,7 +22,7 @@ freqdiv_50 U0(
 shift U1(
     .q(q),
     .clk(clk_div),
-    rst_n(rst_n)
+    .rst_n(rst_n)
 );
 
 endmodule
