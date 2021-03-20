@@ -17,13 +17,13 @@ module freqdiv_50(
 input clk;
 input rst_n;
 output ans;
+wire cmp;
 wire t_tmp;
 
 reg [`FREQ_BIT-1 : 0] q;
 reg [`FREQ_BIT-1 : 0] cnt_tmp; //input to DFF
 reg t_tmp;
 reg ans;
-reg cmp;
 
 // div 50M
 // combinational
@@ -35,10 +35,11 @@ always @(posedge clk or negedge rst_n)
     if(~rst_n) q <= `FREQ_BIT'd0; //to this
     else begin
         q <= (q == `FREQ_BIT'd`DIV-1)? `FREQ_BIT'd0:cnt_tmp;
-        cmp = (q == `FREQ_BIT'd`DIV-1)? 1:0;
     end
+assign cmp = (q == `FREQ_BIT'd`DIV-1)? 1:0;
+
 // tff
-xor(t_tmp,cmp,ans);
+assign t_tmp = ans^cmp;
 
 always @(posedge clk or negedge rst_n)
     if(~rst_n) ans <= 0;
