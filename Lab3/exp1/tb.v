@@ -19,6 +19,8 @@ initial begin
     rst_n = 1'b0;
     #5;
     rst_n = 1'b1;
+    #10*32;
+    $stop;
 end
 
 endmodule
