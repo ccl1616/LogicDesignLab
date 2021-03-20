@@ -25,7 +25,7 @@ initial begin
     rst_n = 1'b0;
     #5;
     rst_n = 1'b1;
-    #10*`CYC_C;
+    #(10*`CYC_C);
 end
 
 endmodule
