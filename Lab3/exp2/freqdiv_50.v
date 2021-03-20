@@ -8,15 +8,16 @@
 
 
 module freqdiv_50(
-    q,
+    ans,
     clk,
     rst_n
 );
 
-output [`FREQ_BIT-1 : 0] q;
+// output [`FREQ_BIT-1 : 0] q;
 input clk;
 input rst_n;
 output ans;
+wire t_tmp;
 
 reg [`FREQ_BIT-1 : 0] q;
 reg [`FREQ_BIT-1 : 0] cnt_tmp; //input to DFF

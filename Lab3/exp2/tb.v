@@ -5,12 +5,13 @@
 
 module tb;
 
-wire [`FREQ_BIT-1 : 0] q;
+// wire [`FREQ_BIT-1 : 0] q;
+wire ans;
 reg clk;
 reg rst_n;
 
 freqdiv_50 U0(
-    .q(q), 
+    .ans(ans), 
     .clk(clk), 
     .rst_n(rst_n)
 );
