@@ -1,7 +1,7 @@
 // top module
 `timescale 1ns / 1ps
 `include "global.v"
-module binary_counter(
+module bcnt_7seg(
   segs,  // 7-segment display
   ssd_ctl, // scan control for 7-segment display
   clk,  // clock from oscillator
