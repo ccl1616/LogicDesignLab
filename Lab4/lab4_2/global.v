@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 // Frequency divider
-`define FREQ_BIT 26 
+`define FREQ_BIT 27 
 `define DIV 50000000 
 // Counter
 `define CNT_BIT_WIDTH 4 //number of bits for the counter

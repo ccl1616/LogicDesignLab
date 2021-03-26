@@ -21,7 +21,7 @@ wire [`CNT_BIT_WIDTH-1:0] ssd_in;
 
 // frequency divider
 freqdiv U0(
-    .clk_div(clk_d), // 1Hz output
+    .clk_out(clk_d), // 1Hz output
     .clk_ctl(ssd_ctl_en), // 2bit output
     .clk(clk), // input
     .rst_n(rst_n) // input active low reset
@@ -29,7 +29,7 @@ freqdiv U0(
 
 // 4bit binary up counter
 bincnt U1(
-    .q(cnt_out), //output
+    .out(cnt_out), //output
     .clk(clk_d),
     .rst_n(rst_n)
 );

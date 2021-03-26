@@ -1,11 +1,12 @@
 // 4bit binary to 7-seg
+`timescale 1ns / 1ps
 `include "global.v"
 module display(
     segs, // 14-segment segs output
     bin  // binary input
 );
-input [3:0] bin;
 output [`SSD_BIT_WIDTH-1:0] segs;  
+input [3:0] bin;
 reg [`SSD_BIT_WIDTH-1:0] segs;
 
 always @(*) begin 

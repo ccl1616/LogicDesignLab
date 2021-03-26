@@ -2,7 +2,7 @@
 // build a counter for 50M and generate 1Hz signal by 100M/(2*50M) = 1Hz
 `include "global.v"
 module freqdiv(
-    clk_div, // 1Hz output
+    clk_out, // 1Hz output
     clk_ctl, // 2bit output
     clk, // input
     rst_n // input active low reset
@@ -10,8 +10,8 @@ module freqdiv(
 
 input clk;
 input rst_n;
-output clk_div;
-output clk_ctl;
+output clk_out;
+output [1:0]clk_ctl;
 wire cmp;
 wire t_tmp;
 wire [1:0]clk_ctl;
@@ -19,7 +19,7 @@ wire [1:0]clk_ctl;
 reg [`FREQ_BIT-1 : 0] q;
 reg [`FREQ_BIT-1 : 0] cnt_tmp; //input to DFF
 reg t_tmp;
-reg clk_div;
+reg clk_out;
 
 // div 50M
 // combinational
@@ -38,9 +38,9 @@ always @(posedge clk or negedge rst_n)
 assign cmp = (q == `FREQ_BIT'd`DIV-1)? 1:0;
 
 // tff
-assign t_tmp = clk_div^cmp;
+assign t_tmp = clk_out^cmp;
 
 always @(posedge clk or negedge rst_n)
-    if(~rst_n) clk_div <= 0;
-    else clk_div <= t_tmp;
+    if(~rst_n) clk_out <= 0;
+    else clk_out <= t_tmp;
 endmodule
