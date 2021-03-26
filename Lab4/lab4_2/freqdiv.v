@@ -26,7 +26,7 @@ reg clk_out;
 always@*
     if(q == `FREQ_BIT'd`DIV-1) cnt_tmp = `FREQ_BIT'd0;
     else cnt_tmp = q + 1'b1;
-assign clk_ctl = q[1:0];
+assign clk_ctl = q[16:15];
 
 // sequential
 always @(posedge clk or negedge rst_n)
