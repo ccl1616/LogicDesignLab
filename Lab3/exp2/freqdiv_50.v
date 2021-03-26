@@ -3,7 +3,7 @@
 
 // divide 50M
 
-`define FREQ_BIT 26 
+`define FREQ_BIT 27 
 `define DIV 50000000 
 
 

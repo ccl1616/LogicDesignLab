@@ -1,5 +1,5 @@
 
-`define FREQ_BIT 26
+`define FREQ_BIT 27
 `define CYC_C 50000000
 
 
