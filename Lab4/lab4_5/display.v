@@ -18,7 +18,6 @@ always @(*) begin
         4'd4: segs = `SS_4;
         4'd5: segs = `SS_5;
         4'd6: segs = `SS_6;
-        4'd7: segs = `SS_7;
         default: segs = `SS_DEF;
     endcase
 end
