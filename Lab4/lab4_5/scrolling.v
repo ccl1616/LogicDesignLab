@@ -14,7 +14,10 @@ input  clk;  // clock from oscillator
 input  rst_n;  // active low reset
 
 wire clk_d; //divided clock
-wire [`CNT_BIT_WIDTH-1:0] cnt_out; // Binary counter output
+wire [`CNT_BIT_WIDTH-1:0] cnt_out0; // Binary counter output
+wire [`CNT_BIT_WIDTH-1:0] cnt_out1;
+wire [`CNT_BIT_WIDTH-1:0] cnt_out2;
+wire [`CNT_BIT_WIDTH-1:0] cnt_out3;
 wire [`SSD_SCAN_CTL_BIT_WIDTH-1:0] ssd_ctl_en;
 wire [`SSD_NUM-1:0] ssd_ctl;
 wire [`CNT_BIT_WIDTH-1:0] ssd_in;
@@ -28,8 +31,11 @@ freqdiv U0(
 );
 
 // 4bit binary up counter
-bincnt U1(
-    .out(cnt_out), //output
+shift U1(
+    .out0(cnt_out0),
+    .out1(cnt_out1),
+    .out2(cnt_out2),
+    .out3(cnt_out3),
     .clk(clk_d),
     .rst_n(rst_n)
 );
@@ -38,10 +44,10 @@ bincnt U1(
 scan_ctl U2(
     .ssd_ctl(ssd_ctl), // output ssd display control signal 
     .ssd_in(ssd_in), // output to ssd display
-    .in0(cnt_out), // 1st input
-    .in1(4'b0000), // 2nd input
-    .in2(4'b0000), // 3rd input
-    .in3(4'b0000),  // 4th input
+    .in0(cnt_out0), // 1st input
+    .in1(cnt_out1), // 2nd input
+    .in2(cnt_out2), // 3rd input
+    .in3(cnt_out3),  // 4th input
     .ssd_ctl_en(ssd_ctl_en) // divided clock for scan control
 );
 

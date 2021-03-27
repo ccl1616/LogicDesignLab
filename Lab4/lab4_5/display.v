@@ -19,15 +19,6 @@ always @(*) begin
         4'd5: segs = `SS_5;
         4'd6: segs = `SS_6;
         4'd7: segs = `SS_7;
-        4'd8: segs = `SS_8;
-        4'd9: segs = `SS_9;
-
-        4'd10: segs = `SS_A;
-        4'd11: segs = `SS_B;
-        4'd12: segs = `SS_C;
-        4'd13: segs = `SS_D;
-        4'd14: segs = `SS_E;
-        4'd15: segs = `SS_F;
         default: segs = `SS_DEF;
     endcase
 end
