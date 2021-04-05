@@ -57,7 +57,7 @@ clkgen U_FD(
 );
 
 // debounce
-debounce_circuit U_dc(
+debounce_2d U_dc(
   .clk(clk_100), // clock control
   .rst_n(rst_n), // reset
   .pb_in0(pb_in0), //push button input
@@ -68,7 +68,7 @@ debounce_circuit U_dc(
 );
 
 // 1 pulse generation circuit
-one_pulse U_op(
+onepulse_2d U_op(
   .clk(led_1),  // clock input
   .rst_n(rst_n), //active low reset
   .in_trig0(pb_d0), // input trigger
