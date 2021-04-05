@@ -3,6 +3,7 @@ module tb;
 reg clk;
 reg rst_n; //active low reset
 reg pb_in0;
+reg pb_in1;
 wire segs;
 wire ssd_ctl;
 wire led0;
@@ -29,8 +30,8 @@ initial begin
     #5;
     rst_n = 1'b0;
     #5 
-    pb_in1 = 1;
-    #10*32;
+    pb_in1 = 1'b1;
+    #(10*32);
     $stop;
 end
 

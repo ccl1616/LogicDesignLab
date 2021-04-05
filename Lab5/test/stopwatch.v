@@ -1,103 +1,66 @@
+//************************************************************************
+// Filename      : stopwatch_disp.v
+// Author        : hp
+// Function      : stopwatch display unit
+// Last Modified : Date: 2009-03-10
+// Revision      : Revision: 1
+// Copyright (c), Laboratory for Reliable Computing (LaRC), EE, NTHU
+// All rights reserved
+//************************************************************************
 `include "global.v"
-// 25sec stopwatch
 module stopwatch(
-  // outputs
   segs, // 7 segment display control
   ssd_ctl, // scan control for 7-segment display
-  led0,
-  led1,
-  // inputs
   clk, // clock
   rst_n, // low active reset
-  pb_in0, // btn for reset stopwatch
-  pb_in1 // btn for pause/start
+  in // input control for FSM
 );
 
 output [`SSD_BIT_WIDTH-1:0] segs; // 7 segment display control
 output [`SSD_DIGIT_NUM-1:0] ssd_ctl; // scan control for 7-segment display
-output led0;
-output led1;
 input clk; // clock
 input rst_n; // low active reset
-input pb_in0; 
-input pb_in1;
+input in; // input control for FSM
 
-// clkgen
 wire [`SSD_SCAN_CTL_BIT_WIDTH-1:0] ssd_ctl_en; // divided output for ssd scan control
-wire clk_100; // divided clock
-wire clk_1;
+wire clk_d; // divided clock
 
-// push btn
-wire pb_d0;
-wire pb_d1;
-wire pulse0;
-wire pulse1;
-
-// fsm
-wire rst;
 wire count_enable; // if count is enabled
 
-//downcount
 wire [`BCD_BIT_WIDTH-1:0] dig0,dig1; // second counter output
-// display
 wire [`BCD_BIT_WIDTH-1:0] ssd_in; // input to 7-segment display decoder
 
-assign led0 = rst;
-assign led1 = count_enable;
+//**************************************************************
+// palse
+//**************************************************************
+
+
 //**************************************************************
 // Functional block
 //**************************************************************
-// frequency divider
-clkgen U_FD(
+// frequency divider 1/(2^27)
+freqdiv27 U_FD(
+  .clk_out(clk_d), // divided clock
+  .clk_ctl(ssd_ctl_en), // divided clock for scan control 
   .clk(clk), // clock from the crystal
-  .rst_n(rst_n), // low active reset 
-  // output
-  .clk_100(clk_100), // divided clock
-  .clk_1(clk_1),
-  .clk_ctl(ssd_ctl_en) // divided clock for scan control 
-);
-
-// debounce
-debounce_2d U_dc(
-  .clk(clk_100), // clock control
-  .rst_n(rst_n), // reset
-  .pb_in0(pb_in0), //push button input
-  .pb_in1(pb_in1),
-  // output
-  .pb_debounced0(pb_d0), // debounced push button output
-  .pb_debounced1(pb_d1)
-);
-
-// 1 pulse generation circuit
-onepulse_2d U_op(
-  .clk(led_1),  // clock input
-  .rst_n(rst_n), //active low reset
-  .in_trig0(pb_d0), // input trigger
-  .in_trig1(pb_d1),
-  // output
-  .out_pulse0(pulse0), // output one pulse 
-  .out_pulse1(pulse1)
+  .rst_n(rst_n) // low active reset
 );
 
 // finite state machine
 fsm U_fsm(
-  .clk(clk_d), // global clock signal
-  .rst_n(rst_n),  // low active reset
-  .in0(pulse0), //input control
-  .in1(pulse1),
-  // output
   .count_enable(count_enable),  // if counter is enabled 
-  .rst(rst)
+  .in(in), //input control
+  .clk(clk_d), // global clock signal
+  .rst_n(rst_n)  // low active reset
 );
 
 // stopwatch module
 downcounter_2d U_sw(
-  .clk(clk_1),  
-  .en(count_enable), // enable/disable for the stopwatch
-  .rst(rst),
-  // output
   .digit1(dig1),  // 2nd digit of the down counter
-  .digit0(dig0)  // 1st digit of the down counter
+  .digit0(dig0),  // 1st digit of the down counter
+  .clk(clk_d),  // global clock
+  .rst_n(rst_n),  // low active reset
+  .en(count_enable) // enable/disable for the stopwatch
 );
 
 //**************************************************************

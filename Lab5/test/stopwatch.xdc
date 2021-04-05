@@ -7,10 +7,8 @@ set_property PACKAGE_PIN V17 [get_ports {rst_n}]
 set_property IOSTANDARD LVCMOS33 [get_ports {rst_n}]
 
 # push button input
-set_property PACKAGE_PIN U18 [get_ports {pb_in0}]
-    set_property IOSTANDARD LVCMOS33 [get_ports {pb_in0}]
-set_property PACKAGE_PIN T17 [get_ports {pb_in1}]                        
-    set_property IOSTANDARD LVCMOS33 [get_ports {pb_in1}]
+set_property PACKAGE_PIN U18 [get_ports {in}]
+set_property IOSTANDARD LVCMOS33 [get_ports {in}]
 
 #8 common segment controls
 set_property PACKAGE_PIN W7 [get_ports {segs[7]}]
@@ -38,8 +36,3 @@ set_property PACKAGE_PIN U4 [get_ports {ssd_ctl[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {ssd_ctl[1]}]
 set_property PACKAGE_PIN U2 [get_ports {ssd_ctl[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {ssd_ctl[0]}]
-
-set_property PACKAGE_PIN U16 [get_ports {led0}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {led0}]
-set_property PACKAGE_PIN E19 [get_ports {led1}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {led1}]
