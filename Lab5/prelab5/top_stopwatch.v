@@ -36,7 +36,6 @@ wire pulse1;
 // fsm
 wire rst;
 wire count_enable; // if count is enabled
-wire decrease_en;
 
 //downcount
 wire [`BCD_BIT_WIDTH-1:0] dig0,dig1; // second counter output
@@ -84,7 +83,6 @@ fsm U_fsm(
   .rst_n(rst_n),  // low active reset
   .in0(pulse0), //input control
   .in1(pulse1),
-  .in2(decrease_en),
   // output
   .count_enable(count_enable),  // if counter is enabled 
   .rst(rst)
@@ -98,8 +96,7 @@ downcounter_2d U_sw(
   .rst(rst),
   // output
   .digit1(dig1),  // 2nd digit of the down counter
-  .digit0(dig0),  // 1st digit of the down counter
-  .decrease_en(decrease_en)
+  .digit0(dig0)  // 1st digit of the down counter
 );
 
 //**************************************************************
