@@ -91,7 +91,6 @@ fsm U_fsm(
 // stopwatch module
 downcounter_2d U_sw(
   .clk(clk_1),  
-  .rst_n(rst_n),  // low active reset
   .en(count_enable), // enable/disable for the stopwatch
   .rst(rst),
   // output
