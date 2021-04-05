@@ -53,7 +53,7 @@ always @*
 
 // register part for BCD counter
 always @(posedge clk or posedge rst)
-  if (rst_n) value <= init_value;
+  if (rst) value <= init_value;
   else value <= value_tmp;
 
 endmodule

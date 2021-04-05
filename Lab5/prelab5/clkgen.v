@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 `include "global.v"
-module clock_generator(
+module clkgen(
   clk, // clock from crystal
   rst_n, // active low reset
   clk_1, // generated 1 Hz clock

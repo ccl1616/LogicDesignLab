@@ -49,8 +49,8 @@
 
 // BCD counter
 `define BCD_BIT_WIDTH 4 // BCD bit width 
-`define ENABLED 1 // ENABLE indicator
-`define DISABLED 0 // EIDABLE indicator
+`define ENABLED 1'b1 // ENABLE indicator
+`define DISABLED 1'b0 // EIDABLE indicator
 `define INCREMENT 1'b1 // increase by 1
 `define BCD_ZERO 4'd0 // 1 for BCD
 `define BCD_ONE 4'd1 // 1 for BCD

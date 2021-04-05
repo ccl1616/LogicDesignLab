@@ -4,7 +4,6 @@ module fsm(
     rst_n, // low active reset
     in0,
     in1,
-    in2,
     // output
     count_enable,  // if counter is enabled 
     rst //input control
@@ -36,8 +35,8 @@ always @*
       end
       else if( {{in0,in1}==2'b01} ) // start at pause
       begin
-            next_state = `STAT_COUNT;
-            {rst,count_enable} = { `DISABLED,`ENABLED };
+        next_state = `STAT_COUNT;
+        {rst,count_enable} = { `DISABLED,`ENABLED };
       end
       else
       begin

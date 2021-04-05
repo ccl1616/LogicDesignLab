@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 `include "global.v"
-module onepulse_2d{
+module onepulse_2d(
     clk,
     rst_n,
     in_trig0,
@@ -8,7 +8,7 @@ module onepulse_2d{
     // output
     out_pulse0,
     out_pulse1
-};
+);
 input clk;
 input rst_n;
 input in_trig0;
@@ -23,7 +23,7 @@ one_pulse U_p0(
     .in_trig(intrig0), // input trigger
     .out_pulse(out_pulse0) // output one pulse 
 );
-one_pulse U_p0(
+one_pulse U_p1(
     .clk(clk),  // clock input
     .rst_n(rst_n), //active low reset
     .in_trig(intrig1), // input trigger

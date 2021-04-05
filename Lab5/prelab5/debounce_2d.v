@@ -14,7 +14,7 @@ input clk;
 input rst_n;
 input pb_in0;
 input pb_in1;
-output pb_debounced0
+output pb_debounced0;
 output pb_debounced1;
 
 debounce_circuit U_pb0(
