@@ -31,9 +31,37 @@ wire [`BCD_BIT_WIDTH-1:0] dig0,dig1; // second counter output
 wire [`BCD_BIT_WIDTH-1:0] ssd_in; // input to 7-segment display decoder
 
 //**************************************************************
-// palse
+// pulse
 //**************************************************************
+wire led_1; // 1Hz divided clock
+wire led_pb; // LED display output (push button)
+wire clk_100;
+wire led_1pulse; // LED display output (1 pulse)
+// Declare internal nodes
+wire pb_debounced; // push button debounced output
 
+clock_generator U_cg(
+  .clk(clk), // clock from crystal
+  .rst_n(rst_n), // active low reset
+  .clk_1(led_1), // generated 1 Hz clock
+  .clk_100(clk_100) // generated 100 Hz clock
+);
+
+// debounce circuit
+debounce_circuit U_dc(
+  .clk(clk_100), // clock control
+  .rst_n(rst_n), // reset
+  .pb_in(in), //push button input
+  .pb_debounced(led_pb) // debounced push button output
+);
+
+// 1 pulse generation circuit
+one_pulse U_op(
+  .clk(led_1),  // clock input
+  .rst_n(rst_n), //active low reset
+  .in_trig(led_pb), // input trigger
+  .out_pulse(led_1pulse) // output one pulse 
+);
 
 //**************************************************************
 // Functional block
@@ -49,7 +77,7 @@ freqdiv27 U_FD(
 // finite state machine
 fsm U_fsm(
   .count_enable(count_enable),  // if counter is enabled 
-  .in(in), //input control
+  .in(led_1pulse), //input control
   .clk(clk_d), // global clock signal
   .rst_n(rst_n)  // low active reset
 );
