@@ -49,7 +49,7 @@ debounce_circuit U_dc0(
   .pb_debounced(led_pb0) // debounced push button output
 );
 // press
-preff U_p(
+press U_p(
     .mode_in(led_pb0),
     .long_press(fsm_rst),
     .short_press(fsm_ps),
