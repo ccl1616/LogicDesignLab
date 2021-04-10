@@ -9,18 +9,21 @@
 //************************************************************************
 `include "global.v"
 module stopwatch(
+  led,
   segs, // 7 segment display control
   ssd_ctl, // scan control for 7-segment display
   clk, // clock
   rst_n, // low active reset
-  in // input control for FSM
+  in0, 
+  in1
 );
-
+output [15:0]led;
 output [`SSD_BIT_WIDTH-1:0] segs; // 7 segment display control
 output [`SSD_DIGIT_NUM-1:0] ssd_ctl; // scan control for 7-segment display
 input clk; // clock
 input rst_n; // low active reset
-input in; // input control for FSM
+input in0; // input control for FSM
+input in1;
 
 wire [`SSD_SCAN_CTL_BIT_WIDTH-1:0] ssd_ctl_en; // divided output for ssd scan control
 wire clk_d; // divided clock
@@ -29,16 +32,22 @@ wire count_enable; // if count is enabled
 
 wire [`BCD_BIT_WIDTH-1:0] dig0,dig1; // second counter output
 wire [`BCD_BIT_WIDTH-1:0] ssd_in; // input to 7-segment display decoder
+//**************************************************************
+// led
+//**************************************************************
+wire [15:0]led;
+wire state_o;
+assign led[15:1] = ( {dig1,dig0}== 2'd00 )? 15'b111_1111_1111_1111 :15'b0;
+assign led[0] = (state_o == 1'b1)? 1'b1 :({dig1,dig0} == 2'd00)? 1'b1 :1'b0;
 
 //**************************************************************
 // pulse
 //**************************************************************
 wire led_1; // 1Hz divided clock
-wire led_pb; // LED display output (push button)
 wire clk_100;
-wire led_1pulse; // LED display output (1 pulse)
+wire led_pb0, led_pb1; // LED display output (push button)
+wire led_1pulse0, led_1pulse1; // LED display output (1 pulse)
 // Declare internal nodes
-wire pb_debounced; // push button debounced output
 
 clock_generator U_cg(
   .clk(clk), // clock from crystal
@@ -48,19 +57,31 @@ clock_generator U_cg(
 );
 
 // debounce circuit
-debounce_circuit U_dc(
+debounce_circuit U_dc0(
   .clk(clk_100), // clock control
   .rst_n(rst_n), // reset
-  .pb_in(in), //push button input
-  .pb_debounced(led_pb) // debounced push button output
+  .pb_in(in0), //push button input
+  .pb_debounced(led_pb0) // debounced push button output
+);
+debounce_circuit U_dc1(
+  .clk(clk_100), // clock control
+  .rst_n(rst_n), // reset
+  .pb_in(in1), //push button input
+  .pb_debounced(led_pb1) // debounced push button output
 );
 
 // 1 pulse generation circuit
-one_pulse U_op(
-  .clk(led_1),  // clock input
+one_pulse U_op0(
+  .clk(clk_100),  // clock input
   .rst_n(rst_n), //active low reset
-  .in_trig(led_pb), // input trigger
-  .out_pulse(led_1pulse) // output one pulse 
+  .in_trig(led_pb0), // input trigger
+  .out_pulse(led_1pulse0) // output one pulse 
+);
+one_pulse U_op1(
+  .clk(clk_100),  // clock input
+  .rst_n(rst_n), //active low reset
+  .in_trig(led_pb1), // input trigger
+  .out_pulse(led_1pulse1) // output one pulse 
 );
 
 //**************************************************************
@@ -76,9 +97,12 @@ freqdiv27 U_FD(
 
 // finite state machine
 fsm U_fsm(
+  .state_o(state_o),
+  .in0(led_1pulse0), // input control
+  .in1(led_1pulse1),
+  .rst(rst), // output rst stopwatch
   .count_enable(count_enable),  // if counter is enabled 
-  .in(led_1pulse), //input control
-  .clk(clk_d), // global clock signal
+  .clk(clk_100), // global clock signal
   .rst_n(rst_n)  // low active reset
 );
 
@@ -87,6 +111,7 @@ downcounter_2d U_sw(
   .digit1(dig1),  // 2nd digit of the down counter
   .digit0(dig0),  // 1st digit of the down counter
   .clk(clk_d),  // global clock
+  .rst(rst),
   .rst_n(rst_n),  // low active reset
   .en(count_enable) // enable/disable for the stopwatch
 );
