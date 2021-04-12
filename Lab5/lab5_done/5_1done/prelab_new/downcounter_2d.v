@@ -1,12 +1,4 @@
-//************************************************************************
-// Filename      : stopwatch.v
-// Author        : hp
-// Function      : Basic up counter module for digital watch
-// Last Modified : Date: 2009-03-10
-// Revision      : Revision: 1
-// Copyright (c), Laboratory for Reliable Computing (LaRC), EE, NTHU
-// All rights reserved
-//************************************************************************
+
 `include "global.v"
 module downcounter_2d(
   digit1,  // 2nd digit of the down counter

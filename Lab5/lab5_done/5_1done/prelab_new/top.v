@@ -1,12 +1,3 @@
-//************************************************************************
-// Filename      : stopwatch_disp.v
-// Author        : hp
-// Function      : stopwatch display unit
-// Last Modified : Date: 2009-03-10
-// Revision      : Revision: 1
-// Copyright (c), Laboratory for Reliable Computing (LaRC), EE, NTHU
-// All rights reserved
-//************************************************************************
 `include "global.v"
 module stopwatch(
   led,

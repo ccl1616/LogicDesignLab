@@ -1,12 +1,3 @@
-//**************************************************************************
-// Filename      : global.v
-// Author        : Hsi-Pin Ma
-// Function      : global definition or parameters for the project
-// Last Modified : Date: 2009-03-10 
-// Revision      : Revision: 1
-// Copyright (c), Laboratory for Reliable Computing (LaRC), EE, NTHU
-// All rights reserved
-//**************************************************************************
 
 // Frequency divider
 `define SSD_SCAN_CTL_BIT_WIDTH 2 // number of bits for ftsd scan control
