@@ -16,7 +16,7 @@ output reg [15:0] amplitude_max;
 output reg [3:0] volume;
 
 reg [3:0] volume_tmp;
-assign amplitude_min = 16'hB000;
+assign amplitude_min = (~amplitude_max) + 1'b1;
 
 always@(*)
   if(button_up && volume != 4'd15)
@@ -34,23 +34,23 @@ always@(posedge clk or posedge rst)
   
 always@(*)
   case(volume)
-    4'd0: amplitude_max = 16'd12800;
-    4'd1: amplitude_max = 16'd5000;
-    4'd2: amplitude_max = 16'd5000;
-    4'd3: amplitude_max = 16'd6400;
-    4'd4: amplitude_max = 16'd6400;
-    4'd5: amplitude_max = 16'd7680;
-    4'd6: amplitude_max = 16'd7680;
-    4'd7: amplitude_max = 16'd8080;
-    4'd8: amplitude_max = 16'd8080;
-    4'd9: amplitude_max = 16'd8960;
-    4'd10: amplitude_max = 16'd8960;
-    4'd11: amplitude_max = 16'd10000;
-    4'd12: amplitude_max = 16'd10000;
-    4'd13: amplitude_max = 16'd11520;
-    4'd14: amplitude_max = 16'd11520;
-    4'd15: amplitude_max = 16'd12000;
-    default: amplitude_max = 16'd12800;
+    4'd0: amplitude_max = 16'h0000;
+    4'd1: amplitude_max = 16'h0800;
+    4'd2: amplitude_max = 16'h1000;
+    4'd3: amplitude_max = 16'h1800;
+    4'd4: amplitude_max = 16'h2000;
+    4'd5: amplitude_max = 16'h2800;
+    4'd6: amplitude_max = 16'h3000;
+    4'd7: amplitude_max = 16'h3800;
+    4'd8: amplitude_max = 16'h4000;
+    4'd9: amplitude_max = 16'h4800;
+    4'd10: amplitude_max = 16'h5000;
+    4'd11: amplitude_max = 16'h5800;
+    4'd12: amplitude_max = 16'h6000;
+    4'd13: amplitude_max = 16'h6800;
+    4'd14: amplitude_max = 16'h7000;
+    4'd15: amplitude_max = 16'h7800;
+    default: amplitude_max = 16'h0000;
   endcase
 
 endmodule
