@@ -1,0 +1,1 @@
+`define DEBOUNCE_WINDOW_SIZE 4
