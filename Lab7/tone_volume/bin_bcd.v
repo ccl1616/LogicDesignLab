@@ -15,7 +15,7 @@ always@(*) begin
         4'd3: {bcd1,bcd0} = {BCD_ZERO,BCD_THREE};
         4'd4: {bcd1,bcd0} = {BCD_ZERO,BCD_FOUR};
         4'd5: {bcd1,bcd0} = {BCD_ZERO,BCD_FIVE};
-        4'd6: {bcd1,bcd0} = {BCD_ZERO,BCD_ONE};
+        4'd6: {bcd1,bcd0} = {BCD_ZERO,BCD_SIX};
         4'd7: {bcd1,bcd0} = {BCD_ZERO,BCD_SEVEN};
         4'd8: {bcd1,bcd0} = {BCD_ZERO,BCD_EIGHT};
         4'd9: {bcd1,bcd0} = {BCD_ZERO,BCD_NINE};
