@@ -2,14 +2,14 @@
 
 module volume(
     clk, 
-    rst,
+    rst_n,
     button_up, 
     button_down,
     amplitude_min,
     amplitude_max,
     volume //binary
 );
-input clk, rst;
+input clk, rst_n;
 input button_up, button_down;
 output [15:0] amplitude_min;
 output reg [15:0] amplitude_max;
@@ -26,8 +26,8 @@ always@(*)
   else
     volume_tmp = volume;
 
-always@(posedge clk or posedge rst)
-  if(rst)
+always@(posedge clk or negedge rst_n)
+  if(~rst_n)
     volume <= 4'd0;
   else
     volume <= volume_tmp;
@@ -52,5 +52,4 @@ always@(*)
     4'd15: amplitude_max = 16'h7800;
     default: amplitude_max = 16'h0000;
   endcase
-
 endmodule

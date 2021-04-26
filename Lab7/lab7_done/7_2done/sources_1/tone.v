@@ -10,7 +10,7 @@ always@(*)
     3'b001 : N = 22'd151515;
     3'b010 : N = 22'd170648;
     3'b100 : N = 22'd191571;
-    default : N = 22'd191571;
+    default : N = 22'd2;
   endcase
 
 endmodule
