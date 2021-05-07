@@ -16,6 +16,7 @@ wire [1:0]state;
 wire [511:0] key_down;
 wire [8:0] last_change;
 wire key_valid;
+wire key_down_op;
 KeyboardDecoder U_KD(
 	.key_down(key_down),
 	.last_change(last_change),
@@ -39,11 +40,18 @@ key2char U_K2C(
     .flag(flag)
 );
 
+one_pulse U_OP0(
+  .clk(clk),  // clock input
+  .rst_n(~rst), //active low reset
+  .in_trig(key_down[last_change]), // input trigger
+  .out_pulse(key_down_op) //  output , use as SET pb into chg_mode of counter
+);
+
 //**************************************************************
 // fsm block
 wire [3:0] dig0,dig1,dig2,dig3;
 fsm U_FSM(
-    .newkey(key_down[last_change])),
+    .newkey(key_down_op),
     .state(state),
     .clk(clk),
     .rst(rst),
