@@ -31,6 +31,7 @@ wire [3:0] char;
 wire flag;
 assign led[3:0] = char;
 assign led[15:14] = state;
+assign led[13] = key_down_op;
 // assign led[13] = newkey;
 key2char U_K2C(
     .clk(clk),

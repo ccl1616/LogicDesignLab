@@ -31,7 +31,7 @@ output reg [3:0]dig2;
 output reg [3:0]dig3;
 output [1:0]state;
 input newkey;
-
+/*
 reg [8:0] last_change_prev = 9'd0;
 always@(posedge clk or posedge rst) begin
     if(rst) begin
@@ -45,7 +45,7 @@ always@(posedge clk or posedge rst) begin
     end
     else 
         last_change_prev <= last_change_prev;
-end
+end*/
 
 
 reg [1:0]state,next_state;
