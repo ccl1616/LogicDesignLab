@@ -1,19 +1,21 @@
+`timescale 1ns / 1ps
 `include "global.v"
-module top(
+module top8_2(
     inout wire PS2_DATA,
-	inout wire PS2_CLK,
-	input wire rst,
-	input wire clk,
-	output [3:0] ssd_ctl,
-	output [7:0] segs,
-    output [15:0] led
+    inout wire PS2_CLK,
+    input wire rst,
+    input wire clk,
+    output wire [3:0] ssd_ctl,
+    output wire [7:0] segs,
+    output wire [15:0] led
 );
-
+wire [1:0]state;
+// wire newkey;
+//**************************************************************
+// Keyboard block
 wire [511:0] key_down;
-wire [8:0] last_change,
+wire [8:0] last_change;
 wire key_valid;
-wire PS2_DATA;
-wire PS2_CLK;
 KeyboardDecoder U_KD(
 	.key_down(key_down),
 	.last_change(last_change),
@@ -26,7 +28,9 @@ KeyboardDecoder U_KD(
 
 wire [3:0] char;
 wire flag;
-wire led[0] = flag;
+assign led[3:0] = char;
+assign led[15:14] = state;
+// assign led[13] = newkey;
 key2char U_K2C(
     .clk(clk),
     .last_change(last_change),
@@ -36,11 +40,28 @@ key2char U_K2C(
 );
 
 //**************************************************************
+// fsm block
+wire [3:0] dig0,dig1,dig2,dig3;
+fsm U_FSM(
+    .newkey(key_down[last_change])),
+    .state(state),
+    .clk(clk),
+    .rst(rst),
+    .last_change(last_change),
+	.key_valid(key_valid),
+    // BCDs
+    .char(char), 
+    .dig0(dig0),
+    .dig1(dig1),
+    .dig2(dig2),
+    .dig3(dig3)
+);
+
+//**************************************************************
 // Display block
 wire clk_d;
 wire [1:0] ssd_ctl_en;
 wire [3:0] ssd_in;
-wire [7:0] segs;
 freqdiv27 U_FD(
     .clk_out(clk_d), // divided clock
     .clk_ctl(ssd_ctl_en), // divided clock for scan control 
@@ -50,10 +71,10 @@ freqdiv27 U_FD(
 scan_ctl U_SCAN(
   .ssd_ctl(ssd_ctl), // ssd display control signal 
   .ssd_in(ssd_in), // output to ssd display
-  .in0(`BCD_THIRTEEN), // 1st input
-  .in1(`BCD_THIRTEEN), // 2nd input
-  .in2(`BCD_THIRTEEN), // 3rd input
-  .in3(char),  // 4th input
+  .in0(dig0), // 1st input
+  .in1(dig1), // 2nd input
+  .in2(dig2), // 3rd input
+  .in3(dig3),  // 4th input
   .ssd_ctl_en(ssd_ctl_en) // divided clock for scan control
 );
 
@@ -62,5 +83,4 @@ display U_display(
   .segs(segs), // 7-segment display output
   .bin(ssd_in)  // BCD number input
 );
-
 endmodule
