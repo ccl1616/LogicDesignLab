@@ -12,8 +12,10 @@ module top8_3(
 wire [2:0]state;
 wire [3:0] char;
 wire flag;
+wire is_neg;
 assign led[3:0] = char;
-assign led[15:13] = state;
+assign led[14:12] = state;
+assign led[15] = is_neg;
 
 //**************************************************************
 // Keyboard block
@@ -46,74 +48,27 @@ one_pulse U_OP0(
   .out_pulse(key_down_op) //  output , use as SET pb into chg_mode of counter
 );
 
-//**************************************************************
-// pre-calculate
-wire is_add, is_subtract, is_multiple, is_enter, is_number;
-wire [2:0]sel;
-wire [3:0] dig0,dig1,dig2,dig3;
-
-identify U_IDENT(
-    .clk(clk), 
+wire [7:0]ascii;
+last2ascii U_L2A(
+    .clk(clk),
     .rst(rst),
     .last_change(last_change),
-    .is_add(is_add), 
-    .is_subtract(is_subtract), 
-    .is_multiple(is_multiple), 
-    .is_enter(is_enter), 
-    .is_number(is_number)
+    .ascii(ascii)
 );
-number U_NUM(
-    .clk(clk), 
-    .rst(rst),
-    .is_number(is_number),
-    .sel(sel), //input
-    .char(char), 
-    .dig0(dig0),
-    .dig1(dig1),
-    .dig2(dig2),
-    .dig3(dig3)
-);
-
 //**************************************************************
-// fsm block , real calculation
-wire is_neg;
-wire [13:0]result;
-wire [3:0] re_dig0, re_dig1, re_dig2, re_dig3;
-assign led[4] = is_neg;
-fsm U_FSM(
-    .newkey(key_down_op),
-    .clk(clk),
-    .rst(rst),
-    .is_number(is_number),
-    .is_enter(is_enter), 
-    .state(state),
-    .sel(sel) //output
-);
-calculator U_CAL(
-    .clk(clk),
-    .rst(rst),
-    .dig0(dig0),
-    .dig1(dig1),
-    .dig2(dig2),
-    .dig3(dig3),
-    .is_add(is_add), 
-    .is_subtract(is_subtract), 
-    .is_multiple(is_multiple), 
-    .is_neg(is_neg),
-    .result(result)
-);
-bin2bcd U_BIN2BCD(
-    .bin(result),
-    .bcd( {re_dig3, re_dig2, re_dig1, re_dig0} )
-);
-
+// calculate app
 wire [3:0] show0,show1,show2,show3;
-always@(*) begin
-    if(sel==3'd6)
-        {show3,show2,show1,show0} = {re_dig3, re_dig2, re_dig1, re_dig0};
-    else
-        {show3,show2,show1,show0} = {dig3, dig2, dig1, dig0};
-end
+calculator_app U_CALAPP(
+    .clk(clk),
+    .rst(rst),
+    .ascii(ascii),
+    .newkey(key_down_op),
+    .show0(show0),
+    .show1(show1),
+    .show2(shwo2),
+    .show3(show3),
+    .is_neg(is_neg)
+);
 
 //**************************************************************
 // Display block

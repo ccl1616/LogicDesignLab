@@ -1,36 +1,46 @@
 `timescale 1ns / 1ps
 
 module identify(
-    input clk, rst,
-    input [8:0] last_change,
-    output reg is_add, is_subtract, is_multiple, is_enter, is_number
-    );
+  input clk, rst,
+  input [7:0]ascii,
+  output reg [1:0] opcode,
+  output reg is_enter, is_number,
+  output reg [3:0] char
+);
 
-reg is_add_tmp, is_subtract_tmp, is_multiple_tmp, is_enter_tmp, is_number_tmp;
+reg [1:0] opcode_tmp;
+reg is_enter_tmp, is_number_tmp;
+reg [3:0] char_tmp;
 
-always@(*)
-  case(last_change)
-    9'h5A : begin is_enter_tmp = 1'b1; is_add_tmp = is_add; is_subtract_tmp = is_subtract; is_multiple_tmp = is_multiple; is_number_tmp = is_number; end
-    9'h79 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b1; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b0; end
-    9'h7B : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b1; is_multiple_tmp = 1'b0; is_number_tmp = 1'b0; end
-    9'h7C : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b1; is_number_tmp = 1'b0; end
-    9'h70 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h69 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h72 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h7A : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h6B : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h73 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h74 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h6C : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h75 : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    9'h7D : begin is_enter_tmp = 1'b0; is_add_tmp = 1'b0; is_subtract_tmp = 1'b0; is_multiple_tmp = 1'b0; is_number_tmp = 1'b1; end
-    default : {is_add_tmp, is_subtract_tmp, is_multiple_tmp, is_enter_tmp, is_number_tmp} = 5'b00000;
-  endcase
+always@(*) begin
+  if(ascii == 8'hE0) begin
+        // enter
+        {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp } = { 2'b00, 1'b1, 1'b10 ascii[3:0] };
+  end
+  else if(ascii >= 8'h30) 
+        {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp } = { 2'b00, 1'b0, 1'b1, ascii[3:0] };
+  else if(ascii[7:4] == 4'h2) begin
+      if(ascii[3:0] == 4'hA) begin
+        // mul
+        {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp } = { 2'b11, 1'b0, 1'b10 ascii[3:0] };
+      end
+      else if(ascii[3:0] == 4'hb) begin
+        // add
+        {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp } = { 2'b01, 1'b0, 1'b10 ascii[3:0] };
+      end
+      else begin
+        // sub
+        {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp } = { 2'b10, 1'b0, 1'b10 ascii[3:0] };
+      end
+  end
+  else 
+        {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp } = {opcode, is_enter, is_number, char};
+end
 
 always@(posedge clk or posedge rst)
   if(rst)
-    {is_add, is_subtract, is_multiple, is_enter, is_number} = 5'b00000;
+    {opcode, is_enter, is_number, char} = 8'd0;
   else
-    {is_add, is_subtract, is_multiple, is_enter, is_number} = {is_add_tmp, is_subtract_tmp, is_multiple_tmp, is_enter_tmp, is_number_tmp};
+    {opcode, is_enter, is_number, char} = {opcode_tmp, is_enter_tmp, is_number_tmp, char_tmp };
 
 endmodule
