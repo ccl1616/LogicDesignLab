@@ -37,10 +37,10 @@ always@(*)begin
         9'h74: char = `BCD_SIX;
         9'h6C: char = `BCD_SEVEN;
         9'h75: char = `BCD_EIGHT;
-        9'h7D: char = `BCD_NINE; //9
+        9'h7D: char = `BCD_NINE; 
         9'h79: char = `BCD_TEN; //+
         9'h7B: char = `BCD_ELEVEN; //-
-        9'h7C: char = `BCD_TWELVE; // *
+        9'h7C: char = `BCD_TWELVE; //*
         9'h5A: char = `BCD_THIRTEEN; //enter
         default: char = `BCD_ZERO;
     endcase

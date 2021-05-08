@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 `include "global.v"
-module top8_3(
+module top8_3_2(
     inout wire PS2_DATA,
     inout wire PS2_CLK,
     input wire rst,
@@ -14,7 +14,7 @@ wire [3:0] char;
 wire flag;
 wire is_neg;
 assign led[3:0] = char;
-assign led[14:12] = state;
+assign led[6:4] = state;
 assign led[15] = is_neg;
 
 //**************************************************************
@@ -32,6 +32,7 @@ KeyboardDecoder U_KD(
 	.rst(rst),
 	.clk(clk)
 );
+
 
 key2char U_K2C(
     .clk(clk),
@@ -58,15 +59,16 @@ last2ascii U_L2A(
 //**************************************************************
 // calculate app
 wire [3:0] show0,show1,show2,show3;
-calculator_app U_CALAPP(
+calculator_app U_CAL(
     .clk(clk),
     .rst(rst),
     .ascii(ascii),
     .newkey(key_down_op),
     .show0(show0),
     .show1(show1),
-    .show2(shwo2),
+    .show2(show2),
     .show3(show3),
+    .state(state),
     .is_neg(is_neg)
 );
 
@@ -84,10 +86,10 @@ freqdiv27 U_FD(
 scan_ctl U_SCAN(
   .ssd_ctl(ssd_ctl), // ssd display control signal 
   .ssd_in(ssd_in), // output to ssd display
-  .in0(show0), // 1st input
-  .in1(show1), // 2nd input
-  .in2(show2), // 3rd input
-  .in3(show3),  // 4th input
+  .in0(show3), // 1st input
+  .in1(show2), // 2nd input
+  .in2(show1), // 3rd input
+  .in3(show0),  // 4th input
   .ssd_ctl_en(ssd_ctl_en) // divided clock for scan control
 );
 
