@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 `define BCD_NULL 4'd13
 
 module assign_number(
