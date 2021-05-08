@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
+`include "global.v"
 `define BCD_NULL 4'd13
 
-module assign_number(
+module number(
     input clk ,rst,
     input is_number,
     input [2:0] sel,
@@ -24,14 +25,14 @@ always@(*) begin
         dig3_tmp = dig3;
     end
     else if(sel==3'd3) begin
-        dig0_tmp = `BCD_NULL;
-        dig1_tmp = `BCD_NULL;
+        dig0_tmp = `BCD_ZERO;
+        dig1_tmp = `BCD_ZERO;
         dig2_tmp = dig0;
         dig3_tmp = dig1;
     end
     else if(sel==3'd4) begin
         dig0_tmp = char;
-        dig1_tmp = `BCD_NULL;
+        dig1_tmp = `BCD_ZERO;
         dig2_tmp = dig2;
         dig3_tmp = dig3;
     end
@@ -40,6 +41,12 @@ always@(*) begin
         dig1_tmp = dig0;
         dig2_tmp = dig2;
         dig3_tmp = dig3;
+    end
+    else if(sel==3'd0) begin
+        dig0_tmp = `BCD_ZERO;
+        dig1_tmp = `BCD_ZERO;
+        dig2_tmp = `BCD_ZERO;
+        dig3_tmp = `BCD_ZERO;
     end
     else begin
         dig0_tmp = dig0;
@@ -51,10 +58,10 @@ end
 
 always@(posedge clk or posedge rst)
   if(rst) begin
-    dig0 <= `BCD_NULL;
-    dig1 <= `BCD_NULL;
-    dig2 <= `BCD_NULL;
-    dig3 <= `BCD_NULL;
+    dig0 <= `BCD_ZERO;
+    dig1 <= `BCD_ZERO;
+    dig2 <= `BCD_ZERO;
+    dig3 <= `BCD_ZERO;
   end
   else begin
     dig0 <= dig0_tmp;
