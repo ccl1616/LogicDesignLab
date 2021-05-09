@@ -7,7 +7,7 @@ module tone(
 
 always@(*)
   case(value)
-    3'd0 : N = 22'd191112; //low Do
+    3'd0 : N = 22'd191112; //mid Do
     3'd1 : N = 22'd170262;
     3'd2 : N = 22'd151686;
     3'd3 : N = 22'd143172;
