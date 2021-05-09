@@ -1,5 +1,5 @@
 `include "global.v"
-// one digit counter 0~9, with carry_in and carry_out
+// one digit counter 0~limit, with carry_in and carry_out
 module upcnt(
     q, 
     carry_in,
