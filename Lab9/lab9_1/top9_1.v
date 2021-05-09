@@ -24,7 +24,7 @@ output audio_sdin; // serial audio data input
 wire clk_1, clk_100;
 clock_generator U_cg(
   .clk(clk), // clock from crystal
-  .rst_n(rst_n), // active low reset
+  .rst_n(~rst), // active low reset
   .clk_1(clk_1), // generated 1 Hz clock
   .clk_100(clk_100) // generated 100 Hz clock
 );
@@ -54,7 +54,7 @@ wire [15:0] audio_in_left,audio_in_right;
 // Note generation
 note_gen U_GEN(
   .clk(clk), // clock from crystal
-  .rst_n(rst_n), // active low reset
+  .rst_n(~rst), // active low reset
   .note_div(note_div), // div for note generation
   .audio_left(audio_in_left), // left sound audio
   .audio_right(audio_in_right) // right sound audio
@@ -63,7 +63,7 @@ note_gen U_GEN(
 // Speaker controllor
 speaker_control U_SC(
   .clk(clk),  // clock from the crystal
-  .rst_n(rst_n),  // active low reset
+  .rst_n(~rst),  // active low reset
   .audio_in_left(audio_in_left), // left channel audio data input
   .audio_in_right(audio_in_right), // right channel audio data input
   .audio_mclk(audio_mclk), // master clock
@@ -86,7 +86,7 @@ freqdiv27 U_FD(
     .clk_out(clk_d), // divided clock
     .clk_ctl(ssd_ctl_en), // divided clock for scan control 
     .clk(clk), // clock from the crystal
-    .rst_n(rst_n) // low active reset
+    .rst_n(~rst) // low active reset
 );
 scan_ctl U_SCAN(
   .ssd_ctl(ssd_ctl), // ssd display control signal 
