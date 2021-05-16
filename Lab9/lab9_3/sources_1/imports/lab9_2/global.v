@@ -39,14 +39,16 @@
 `define SSD_SEVEN  `SSD_BIT_WIDTH'b0001_1111 // 7
 `define SSD_EIGHT  `SSD_BIT_WIDTH'b0000_0001 // 8
 `define SSD_NINE   `SSD_BIT_WIDTH'b0000_1001 // 9
-`define SSD_A   `SSD_BIT_WIDTH'b0000_0101 // a
+`define SSD_A   `SSD_BIT_WIDTH'b0000_0100 // a
 `define SSD_B   `SSD_BIT_WIDTH'b1100_0001 // b
 `define SSD_C   `SSD_BIT_WIDTH'b1110_0101 // c
 `define SSD_D   `SSD_BIT_WIDTH'b1000_0101 // d
 `define SSD_E   `SSD_BIT_WIDTH'b0110_0001 // e
 `define SSD_F   `SSD_BIT_WIDTH'b0111_0001 // f
 `define SSD_DEF    `SSD_BIT_WIDTH'b0000_0000 // default, all LEDs being lighted
-
+`define SSD_S   `SSD_BIT_WIDTH'b0100_1000 // s
+`define SSD_M   `SSD_BIT_WIDTH'b1101_0100 // m
+`define SSD_ENTER   `SSD_BIT_WIDTH'b1111_1111 // enter
 // BCD counter
 `define BCD_BIT_WIDTH 4 // BCD bit width 
 `define ENABLED 1'b1 // ENABLE indicator
@@ -62,4 +64,8 @@
 `define BCD_SEVEN 4'd7 // 2 for BCD
 `define BCD_EIGHT 4'd8 // 2 for BCD
 `define BCD_NINE 4'd9 // 9 for BCD
+`define BCD_TEN 4'd10
+`define BCD_ELEVEN 4'd11
+`define BCD_TWELVE 4'd12
+`define BCD_THIRTEEN 4'd13
 `define BCD_DEF 4'd15 // all 1
