@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module top9_2(
+module top9_3(
     inout wire PS2_DATA,
 	inout wire PS2_CLK,
 	input wire rst,
@@ -19,7 +19,7 @@ wire [7:0]AS_letter;
 wire [3:0] num;
 assign led[6:0] = AS_letter;
 assign led[15] = caps_lock;
-assign led[14:11] = num;
+assign led[14] = mode;
 //**************************************************************
 // Keyboard block
 wire [511:0] key_down;
@@ -64,16 +64,23 @@ as2num M_AS(
 	.AS_letter(AS_letter),
     .num(num)
 );
-
+/*
 note_division M1 (
     .clk(clk),
     .rst(rst),
     .switch(mode),
 	.reference(num),
     .note_division_left(note_division_left),
-    .note_division_right(note_division_right),
+    .note_division_right(note_division_right)
+); */
+note_division M1 (
+    .mode_switch(mode),
+	.AS_letter(AS_letter),
+    .note_division_left(note_division_left),
+    .note_division_right(note_division_right)
 );
-                 
+wire [15:0] audio_in_right2, audio_in_left2;
+    
 note_generation M2 (
     .clk(clk),
     .rst(rst),
@@ -82,17 +89,19 @@ note_generation M2 (
     .audio_right(audio_in_right),
     .audio_left(audio_in_left)
 );
+
                     
 speaker_control M3 (
     .clk(clk),
-    .rst(rst),
+    .rst_n(~rst),
     .audio_in_right(audio_in_right),
     .audio_in_left(audio_in_left),
     .audio_mclk(audio_mclk),
-    .audio_lrclk(audio_lrclk),
-    .audio_sclk(audio_sclk),
+    .audio_lrck(audio_lrclk),
+    .audio_sck(audio_sclk),
     .audio_sdin(audio_sdin)
 );
+
 //**************************************************************
 // Display block
 wire clk_d;
