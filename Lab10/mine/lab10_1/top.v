@@ -1,6 +1,7 @@
 module top(
   input clk,
   input rst,
+  input btnU,
   output [3:0] vgaRed,
   output [3:0] vgaGreen,
   output [3:0] vgaBlue,
@@ -19,6 +20,15 @@ wire [9:0] v_cnt;  //480
 
 assign {vgaRed, vgaGreen, vgaBlue} = (valid==1'b1) ? pixel:12'h0;
 
+// btn to en
+wire en; // enable from inner fsm
+btn2en U_btn2en(
+    .btn(btnU),
+    .clk(clk),
+    .rst(rst),
+    .en(en)
+);
+
 // Frequency Divider
 clock_divisor clk_wiz_0_inst(
   .clk(clk),
@@ -30,6 +40,7 @@ clock_divisor clk_wiz_0_inst(
 mem_addr_gen mem_addr_gen_inst(
   .clk(clk_22),
   .rst(rst),
+  .en(en),
   .h_cnt(h_cnt),
   .v_cnt(v_cnt),
   .pixel_addr(pixel_addr)

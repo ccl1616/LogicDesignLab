@@ -1,6 +1,7 @@
 module mem_addr_gen(
   input clk,
   input rst,
+  input en,
   input [9:0] h_cnt,
   input [9:0] v_cnt,
   output [16:0] pixel_addr
@@ -14,7 +15,7 @@ always @ (posedge clk or posedge rst) begin
   if(rst)
     position <= 0;
   else if(position < 239)
-    position <= position + 1;
+    position <= position + en;
   else
     position <= 0;
 end
