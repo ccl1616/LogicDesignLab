@@ -23,10 +23,10 @@ assign {vgaRed, vgaGreen, vgaBlue} = (valid==1'b1) ? pixel:12'h0;
 // btn to en
 wire en; // enable from inner fsm
 btn2en U_btn2en(
-    .btn(btnU),
-    .clk(clk),
-    .rst(rst),
-    .en(en)
+  .btn(btnU),
+  .clk(clk),
+  .rst(rst),
+  .en(en)
 );
 
 // Frequency Divider

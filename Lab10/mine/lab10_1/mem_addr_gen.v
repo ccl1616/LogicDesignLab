@@ -19,5 +19,15 @@ always @ (posedge clk or posedge rst) begin
   else
     position <= 0;
 end
-    
+/*
+always @ (posedge clk or posedge rst) begin
+  if(rst)
+    position <= 8'd239;
+  else if(position > 8'd0)
+    position <= position - en;
+  else
+    position <= 8'd239;
+end 
+*/
+
 endmodule
