@@ -13,19 +13,23 @@ module sync_rw_port_ram
     output logic [DATA_WIDTH-1:0] dout
    );
 
-   // signal declaration
-   logic [DATA_WIDTH-1:0] ram [0:2**ADDR_WIDTH-1];
-   logic [DATA_WIDTH-1:0] data_reg;
+    // signal declaration
+    logic [DATA_WIDTH-1:0] ram [0:2**ADDR_WIDTH-1];
+    logic [DATA_WIDTH-1:0] data_reg;
 
-   // body
-   always_ff @(posedge clk)
-   begin
-     // write operation
-     if (we)
-         ram[addr_w] <= din;
-     // read operation
-     data_reg <= ram[addr_r];
-   end
-   // output
-   assign dout = data_reg;
+    initial begin
+      ram[13'b1000_0001] = 7'h32;
+    end
+
+    // body
+    always_ff @(posedge clk)
+    begin
+      // write operation
+      if (we)
+          ram[addr_w] <= din;
+      // read operation
+      data_reg <= ram[addr_r];
+    end
+    // output
+    assign dout = data_reg;
 endmodule

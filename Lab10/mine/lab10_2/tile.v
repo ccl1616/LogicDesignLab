@@ -12,7 +12,7 @@ wire [`ADDR_WIDTH-1:0] addr_r, addr_w;
 wire [`DATA_WIDTH-1:0] din,dout;
 wire [7:0]font_word;
 
-// char gen
+// char generator
 sync_rw_port_ram U_ram(
     .clk(clk),
     .we(we),
