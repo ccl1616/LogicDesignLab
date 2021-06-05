@@ -7,6 +7,8 @@
 `define S4 3'd4
 
 module fsm_ram(
+    input clk,
+    input rst,
     input [7:0] as0,as1,as2,as3,
     input newkey_op,
     output reg we,
