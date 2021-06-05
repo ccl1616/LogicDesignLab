@@ -16,9 +16,14 @@ module sync_rw_port_ram
     // signal declaration
     logic [DATA_WIDTH-1:0] ram [0:2**ADDR_WIDTH-1];
     logic [DATA_WIDTH-1:0] data_reg;
-
+    integer i,j;
     initial begin
-      ram[13'b1000_0001] = 7'h32;
+    // y x
+      ram[ {6'h5,7'h5} ] = 7'h35;
+      for(i = 1; i <= 9; i++) 
+        ram[{6'h1,(7'h0+i)} ] = 7'h30 + i;
+      for(j = 1; j <= 9; j++) 
+        ram[{6'h0+j,7'h1} ] = 7'h30 + j;
     end
 
     // body

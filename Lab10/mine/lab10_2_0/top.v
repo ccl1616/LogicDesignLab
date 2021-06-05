@@ -1,6 +1,7 @@
 module top(
   input clk,
   input rst,
+  input [15:0] sw,
   output [3:0] vgaRed,
   output [3:0] vgaGreen,
   output [3:0] vgaBlue,
@@ -42,14 +43,14 @@ vga_controller   vga_inst(
 );
 
 tile tile(
-  .clk(clk),
+  .clk(clk_25MHz),
   .rst(rst),
-  .pixel_x(h_cnt),
-  .pixel_y(v_cnt),
+  .pixel_x(h_cnt>>1),
+  .pixel_y(v_cnt>>1),
   .font_bit(font_bit)
 );
-assign vgaRed = font_bit ?4'df:4'd0;
-assign vgaGreen = 4'd0;
-assign vgaBlue = 4'd0;
+assign vgaRed = font_bit ? sw[3:0]:4'h0;
+assign vgaGreen = font_bit ? sw[7:4]:4'h0;
+assign vgaBlue = font_bit ? sw[11:8]:4'h0;
       
 endmodule

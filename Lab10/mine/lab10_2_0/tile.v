@@ -28,6 +28,7 @@ font_rom U_font_rom(
     .data(font_word)
 );
 
+/*
 always@(*) begin
     case(pixel_x[2:0])
     3'd0: font_bit = font_word[0];
@@ -40,5 +41,15 @@ always@(*) begin
     3'd6: font_bit = font_word[6];
     3'd7: font_bit = font_word[7];
     default: font_bit = 0;
+    endcase
 end
+*/
+wire [2:0]bit_addr = ~(pixel_x[2:0]);
+reg [2:0]bit_addr_delay1, bit_addr_delay2;
+always@(posedge clk)
+    bit_addr_delay1 <= bit_addr;
+always@(posedge clk)
+    bit_addr_delay2 <= bit_addr_delay1;
+
+assign font_bit = font_word[bit_addr_delay2];
 endmodule

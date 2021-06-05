@@ -27,6 +27,6 @@ fsm U_fsm(
     .clk(clk),
     .rst(rst),
     .btn_op(btn_op),
-    .state(en),
+    .state(en)
 );
 endmodule

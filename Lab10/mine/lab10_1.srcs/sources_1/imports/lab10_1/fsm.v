@@ -5,7 +5,7 @@ module fsm(
     input clk,
     input rst,
     input btn_op,
-    output reg state,
+    output reg state
 );
 reg state_next;
 
@@ -23,6 +23,7 @@ always@* begin
             state_next = `S0;
         else state_next = `S1;
     end
+    endcase
 end
 
 // state register
