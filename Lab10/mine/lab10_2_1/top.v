@@ -186,7 +186,7 @@ assign vgaBlue = 4'h0;
 // tile related
 // char generator
 sync_rw_port_ram U_ram(
-    .clk(clk),
+    .clk(clk_25MHz),
     .we(we),
     .addr_r( { (v_cnt>>1)[9:4],(h_cnt>>1)[9:3]} ),
     .addr_w(addr_w),
@@ -195,7 +195,7 @@ sync_rw_port_ram U_ram(
 );
 
 font_rom U_font_rom(
-    .clk(clk),
+    .clk(clk_25MHz),
     .addr( {dout,(v_cnt>>1)[3:0]} ),
     .data(font_word)
 );
