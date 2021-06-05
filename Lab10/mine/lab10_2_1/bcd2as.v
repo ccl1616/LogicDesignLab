@@ -1,6 +1,4 @@
-module bcd2ascii(
-    input clk,
-    input rst,
+module bcd2as(
     input [3:0]bcd,
     output reg [7:0]ascii
 );
