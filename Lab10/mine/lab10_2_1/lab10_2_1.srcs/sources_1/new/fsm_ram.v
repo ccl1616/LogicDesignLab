@@ -30,12 +30,11 @@ always@(*)begin
             if(newkey_op) next_state = `S1;
             else next_state = `S_IDLE;
         end
-        `S1: next_state = `S_2;
-        `S2: next_state = `S_3;
-        `S3: next_state = `S_4;
+        `S1: next_state = `S2;
+        `S2: next_state = `S3;
+        `S3: next_state = `S4;
         `S4: next_state = `S_IDLE;
         default: next_state = `S_IDLE;
-        end
     endcase
 end
 

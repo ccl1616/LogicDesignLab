@@ -1,5 +1,5 @@
 `include "global.v"
-module top10_2(
+module top10_2_1_together(
     inout wire PS2_DATA,
     inout wire PS2_CLK,
     input wire rst,
@@ -122,19 +122,19 @@ clock_divisor clk_wiz_0_inst(
 
 // bcd 2 ascii
 wire [7:0]as0,as1,as2,as3;
-bcd2asc U0_bcd2as(
+bcd2as U0_bcd2as(
     .bcd(show0),
     .ascii(as0)
 );
-bcd2asc U1_bcd2as(
+bcd2as U1_bcd2as(
     .bcd(show1),
     .ascii(as1)
 );
-bcd2asc U2_bcd2as(
+bcd2as U2_bcd2as(
     .bcd(show2),
     .ascii(as2)
 );
-bcd2asc U3_bcd2as(
+bcd2as U3_bcd2as(
     .bcd(show3),
     .ascii(as3)
 );
@@ -185,10 +185,13 @@ assign vgaBlue = 4'h0;
 
 // tile related
 // char generator
+wire [9:0] h_cnt2 = h_cnt >> 1; //640
+wire [9:0] v_cnt2 = v_cnt >> 1;  //480
+
 sync_rw_port_ram U_ram(
     .clk(clk_25MHz),
     .we(we),
-    .addr_r( { (v_cnt>>1)[9:4],(h_cnt>>1)[9:3]} ),
+    .addr_r( { v_cnt2[9:4],h_cnt2[9:3]} ),
     .addr_w(addr_w),
     .din(din),
     .dout(dout)
@@ -196,17 +199,19 @@ sync_rw_port_ram U_ram(
 
 font_rom U_font_rom(
     .clk(clk_25MHz),
-    .addr( {dout,(v_cnt>>1)[3:0]} ),
+    .addr( {dout,v_cnt2[3:0]} ),
     .data(font_word)
 );
 
-wire [2:0]bit_addr = ~( (h_cnt>>1)[2:0] );
-reg [2:0]bit_addr_delay1, bit_addr_delay2;
+wire [2:0]bit_addr = ~( h_cnt2[2:0] );
+reg [2:0]bit_addr_delay1, bit_addr_delay2, bit_addr_delay3;
 always@(posedge clk)
     bit_addr_delay1 <= bit_addr;
 always@(posedge clk)
     bit_addr_delay2 <= bit_addr_delay1;
+always@(posedge clk)
+    bit_addr_delay3 <= bit_addr_delay2;
 
-assign font_bit = font_word[bit_addr_delay2];
+assign font_bit = font_word[bit_addr_delay3];
 
 endmodule
