@@ -1,0 +1,113 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 16 22:07:46 2021
+| Host         : DESKTOP-R24E2UI running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    35 |
+|    Minimum number of control sets                        |    35 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    79 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    35 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     5 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    20 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             107 |           41 |
+| No           | No                    | Yes                    |            2050 |          851 |
+| No           | Yes                   | No                     |              12 |            6 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1382 |          431 |
+| Yes          | Yes                   | No                     |              10 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|           Clock Signal          |                 Enable Signal                |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------+----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  nolabel_line123/M3/p_0_in      |                                              | rst_IBUF                           |                2 |              2 |         1.00 |
+|  show/show_clk/Q_BUFG[0]        |                                              | rst_IBUF                           |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG                  | key_de/inst/Ps2Interface_i/bits_count        | rst_IBUF                           |                2 |              4 |         2.00 |
+|  nolabel_line123/M_Ma/CLK       |                                              | rst_IBUF                           |                3 |              7 |         2.33 |
+|  player_1/sign/fail_clk/my_time |                                              | rst_IBUF                           |                2 |              8 |         4.00 |
+|  player_2/sign/fail_clk/my_time |                                              | rst_IBUF                           |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                  | key_de/inst/Ps2Interface_i/rx_valid          | rst_IBUF                           |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                  | key_de/inst/Ps2Interface_i/rx_finish         | rst_IBUF                           |                3 |              8 |         2.67 |
+|  debug/showclk/out[0]           |                                              |                                    |                6 |              9 |         1.50 |
+|  clk_IBUF_BUFG                  | key_de/op/E[0]                               | rst_IBUF                           |                5 |              9 |         1.80 |
+|  show/show_clk/Q_BUFG[0]        |                                              | show/vga_inst/pixel_cnt[9]_i_1_n_0 |                4 |             10 |         2.50 |
+|  show/show_clk/Q_BUFG[0]        | show/vga_inst/line_cnt                       | show/vga_inst/line_cnt[9]_i_1_n_0  |                6 |             10 |         1.67 |
+|  clk_IBUF_BUFG                  | key_de/inst/E[0]                             | rst_IBUF                           |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG                  | key_de/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                           |                2 |             11 |         5.50 |
+|  show/show_clk/Q_BUFG[0]        |                                              |                                    |                8 |             11 |         1.38 |
+|  clk_IBUF_BUFG                  | player_1/do/d/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_1/do/type_1/load                      | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_1/sign/_fail/load                     | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_1/sign/time_limit[31]_i_1_n_0         | rst_IBUF                           |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                  | player_2/do/type_1/load                      | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_2/do/c/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_2/sign/_fail/load                     | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_1/do/a/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_1/do/b/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_1/do/c/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_2/do/a/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_2/do/b/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_2/do/d/load                           | rst_IBUF                           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                  | player_2/sign/time_limit[31]_i_1__0_n_0      | rst_IBUF                           |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                  |                                              |                                    |               27 |             87 |         3.22 |
+|  clk_IBUF_BUFG                  | player_1/do/cldm/CO[0]                       | rst_IBUF                           |               69 |            200 |         2.90 |
+|  clk_IBUF_BUFG                  | player_2/do/cldm/CO[0]                       | rst_IBUF                           |               73 |            200 |         2.74 |
+|  clk_IBUF_BUFG                  | player_1/sign/E[0]                           | rst_IBUF                           |               82 |            242 |         2.95 |
+|  clk_IBUF_BUFG                  | player_2/sign/E[0]                           | rst_IBUF                           |               76 |            242 |         3.18 |
+|  clk_IBUF_BUFG                  |                                              | rst_IBUF                           |              840 |           2025 |         2.41 |
++---------------------------------+----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+
+
