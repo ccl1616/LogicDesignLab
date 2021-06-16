@@ -73,3 +73,23 @@
 // FSM
 `define STAT_COUNT 1'b1
 `define STAT_PAUSE 1'b0
+
+// sound
+`define MID_DO 22'd191112
+`define MID_RE 22'd170262
+`define MID_MI 22'd151686
+`define MID_FA 22'd143172
+
+`define MID_SO 22'd127552
+`define MID_LA 22'd113636
+`define MID_SI 22'd101238
+
+`define HIGH_DO 22'd95556
+`define HIGH_RE 22'd85131
+`define HIGH_MI 22'd75843
+`define HIGH_FA 22'd71586
+
+`define HIGH_SO 22'd63776
+`define HIGH_LA 22'd56818
+`define HIGH_SI 22'd50619
+`define SILENT 22'd2
