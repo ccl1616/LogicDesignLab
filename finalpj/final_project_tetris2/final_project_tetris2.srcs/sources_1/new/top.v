@@ -121,7 +121,7 @@ module top (
 	);
 
 	wire fast_switch = sw[13] | sw[1];
-	wire fast_player = (score_player_1 >= 32'd3 | score_player_2 >= 32'd3) ?1'b1:1'b0 ;
+	wire fast_player = (score_player_1 >= 32'd2 | score_player_2 >= 32'd2) ?1'b1:1'b0 ;
     my_music music(
         .clk(clk), 
         .rst(rst),
