@@ -83,18 +83,7 @@ module segment (
 
     always @(*) begin
         _led = 0;
-        /*
-        if (map[19:0] > 0) _led[0] = 1'b1;
-        if (map[39:20] > 0) _led[1] = 1'b1;
-        if (map[59:40] > 0) _led[2] = 1'b1;
-        if (map[79:60] > 0) _led[3] = 1'b1;
-        if (map[99:80] > 0) _led[4] = 1'b1;
-        if (map[119:100] > 0) _led[5] = 1'b1;
-        if (map[139:120] > 0) _led[6] = 1'b1;
-        if (map[159:140] > 0) _led[7] = 1'b1;
-        if (map[179:160] > 0) _led[8] = 1'b1;
-        if (map[199:180] > 0) _led[9] = 1'b1;
-        */
+        
         if (key_set[0] |key_set[1] |key_set[2] | key_set[3]) _led[8] = 1'b1;
 
         if(fail_1) begin

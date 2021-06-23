@@ -119,15 +119,10 @@ module do_something (
         .delta_score(next_score)
     ); 
 
-//    random r (
-//        .clk(clk), 
-//        .rst(rst),
-//        .rand(rand)
-//    );
     LFSR lfsr(
         .i_Clk(clk),
         .i_Enable(1),
-   // Optional Seed Value
+    // Optional Seed Value
         .i_Seed_DV(0),
         .i_Seed_Data(0),
         .o_LFSR_Data(rand),
@@ -140,6 +135,7 @@ module do_something (
         .now_map(_map | merge_map),
         .clear_line_drop_map(clear_line_drop_map)
     );
+    
     gen_map type_1 (
         .clk(clk),
         .rst(rst),

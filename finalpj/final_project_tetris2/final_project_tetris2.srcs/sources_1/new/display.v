@@ -25,8 +25,6 @@ module display(
     wire [11:0] pixel_color;
 
     assign {vgar, vgag, vgab} = (valid==1'b1) ? (state_1 == `INI) ? pixel : pixel_color :12'h0;
-    //assign {vgar, vgag, vgab} = (valid==1'b1) ? pixel_color :12'h0;
-    //assign {vgaRed, vgaGreen, vgaBlue} = (valid==1'b1) ? pixel :12'h0;
 
     wire clk_show;
     clock_divider #(.n(2)) show_clk(

@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: NTHU
-// Engineer: Y.J Shih
-// 
-// Create Date: 2015/05/27 11:15:54
-// Design Name: PS/2 interface
-// Module Name: Ps2Interface
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-//  Original VHDL version is create by Ulrich Zolt.
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
 // ps2interface.vhd

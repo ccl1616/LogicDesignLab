@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Clock_1Hz(
+module clock_1Hz(
     input clk_origin,
     input rst,
     output reg clk_1Hz

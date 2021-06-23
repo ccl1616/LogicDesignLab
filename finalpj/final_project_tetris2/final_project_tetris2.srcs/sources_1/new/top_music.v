@@ -20,7 +20,7 @@ wire [15:0] amplitude_min,amplitude_max;
 assign amplitude_max = 16'h0800;
 assign amplitude_min = (~amplitude_max) + 1'b1;
 
-Clock_1Hz M0 (
+clock_1Hz M0 (
     .clk_origin(clk),
     .rst(rst),
     .clk_1Hz(clk_1Hz)
@@ -45,15 +45,7 @@ note_division M1 (
     .rst(rst),
     .note_division(note_division)
 );
-                 
-//note_generation M2 (
-//    .clk(clk),
-//    .rst(rst),
-//    .note_division(note_division),
-//    .audio_right(audio_in_right),
-//    .audio_left(audio_in_left)
-//);
-
+    
 note_gen M20(
   .clk(clk),
   .rst_n(~rst), // active low reset
