@@ -1,0 +1,1833 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Jun 18 19:43:45 2021
+| Host         : DESKTOP-R24E2UI running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (540)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (494)
+5. checking no_input_delay (5)
+6. checking no_output_delay (46)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (540)
+--------------------------
+ There are 7 register/latch pins with no clock driven by root clock pin: sw[13] (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: sw[15] (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: sw[1] (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: debug/showclk/count_reg[12]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line125/M3/clk_cnt_reg[4]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: nolabel_line125/M_2hz/clk_4_reg/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: nolabel_line125/M_Ma/clk_8_reg/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[10]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[11]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[12]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[13]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[14]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[15]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[16]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[17]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[18]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[19]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[20]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[21]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[22]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[23]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[24]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[25]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[26]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[27]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[28]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[29]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[30]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[31]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[3]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[4]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[5]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[6]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[7]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[8]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_1/do/Score_reg[9]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[10]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[11]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[12]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[13]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[14]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[15]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[16]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[17]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[18]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[19]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[20]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[21]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[22]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[23]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[24]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[25]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[26]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[27]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[28]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[29]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[30]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[31]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[3]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[4]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[5]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[6]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[7]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[8]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: player_2/do/Score_reg[9]/Q (HIGH)
+
+ There are 60 register/latch pins with no clock driven by root clock pin: show/show_clk/count_reg[1]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (494)
+--------------------------------------------------
+ There are 494 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (5)
+------------------------------
+ There are 5 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (46)
+--------------------------------
+ There are 46 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -3.088    -1826.805                   1205                 5181        0.071        0.000                      0                 5181        4.500        0.000                       0                  3678  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        -3.088    -1826.805                   1205                 5181        0.071        0.000                      0                 5181        4.500        0.000                       0                  3678  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :         1205  Failing Endpoints,  Worst Slack       -3.088ns,  Total Violation    -1826.805ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.071ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -3.088ns  (required time - arrival time)
+  Source:                 player_2/do/Piece_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/c/return_reg[8]/D
+                            (rising edge-triggered cell FDPE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        13.040ns  (logic 5.548ns (42.546%)  route 7.492ns (57.454%))
+  Logic Levels:           17  (CARRY4=8 LUT1=1 LUT2=2 LUT3=1 LUT4=1 LUT5=1 LUT6=2 MUXF7=1)
+  Clock Path Skew:        -0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.948ns = ( 14.948 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.257ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.736     5.257    player_2/do/clk_IBUF_BUFG
+    SLICE_X14Y112        FDCE                                         r  player_2/do/Piece_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y112        FDCE (Prop_fdce_C_Q)         0.478     5.735 r  player_2/do/Piece_reg[13]/Q
+                         net (fo=87, routed)          0.834     6.569    player_2/do/currentPiece[13]
+    SLICE_X14Y110        LUT3 (Prop_lut3_I2_O)        0.295     6.864 r  player_2/do/return5_carry__2_i_4__0/O
+                         net (fo=18, routed)          0.943     7.807    player_2/do/Piece_reg[10]_2[0]
+    SLICE_X20Y113        CARRY4 (Prop_carry4_DI[0]_O[2])
+                                                      0.556     8.363 r  player_2/do/return_reg[15]_i_570__0/O[2]
+                         net (fo=3, routed)           1.243     9.606    player_2/do/Piece_reg[10]_3[2]
+    SLICE_X25Y113        LUT2 (Prop_lut2_I0_O)        0.330     9.936 r  player_2/do/return[15]_i_561__2/O
+                         net (fo=1, routed)           0.477    10.413    player_2/do/return[15]_i_561__2_n_0
+    SLICE_X29Y113        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.587    11.000 r  player_2/do/return_reg[15]_i_535__0/CO[3]
+                         net (fo=1, routed)           0.000    11.000    player_2/do/return_reg[15]_i_535__0_n_0
+    SLICE_X29Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.114 r  player_2/do/return_reg[15]_i_495__1/CO[3]
+                         net (fo=1, routed)           0.000    11.114    player_2/do/return_reg[15]_i_495__1_n_0
+    SLICE_X29Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.228 r  player_2/do/return_reg[15]_i_464__0/CO[3]
+                         net (fo=1, routed)           0.000    11.228    player_2/do/return_reg[15]_i_464__0_n_0
+    SLICE_X29Y116        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.342 r  player_2/do/return_reg[15]_i_445__1/CO[3]
+                         net (fo=1, routed)           0.000    11.342    player_2/do/return_reg[15]_i_445__1_n_0
+    SLICE_X29Y117        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.676 f  player_2/do/return_reg[15]_i_433__1/O[1]
+                         net (fo=1, routed)           0.496    12.172    player_2_n_74
+    SLICE_X32Y117        LUT1 (Prop_lut1_I0_O)        0.303    12.475 r  return[15]_i_432__2/O
+                         net (fo=1, routed)           0.000    12.475    return[15]_i_432__2_n_0
+    SLICE_X32Y117        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640    13.115 r  return_reg[15]_i_418__0/O[3]
+                         net (fo=1, routed)           0.442    13.557    player_2/do/c/return_reg[15]_i_260__0_1[3]
+    SLICE_X31Y117        LUT2 (Prop_lut2_I1_O)        0.306    13.863 r  player_2/do/c/return[15]_i_348__6/O
+                         net (fo=1, routed)           0.000    13.863    player_2/do/c/return[15]_i_348__6_n_0
+    SLICE_X31Y117        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248    14.111 r  player_2/do/c/return_reg[15]_i_260__0/O[3]
+                         net (fo=5, routed)           0.468    14.579    player_2/do/c/return_reg[15]_i_260__0_n_4
+    SLICE_X30Y117        LUT4 (Prop_lut4_I0_O)        0.306    14.885 r  player_2/do/c/return[15]_i_121__4/O
+                         net (fo=1, routed)           0.596    15.481    player_2/do/c/_rotate/return4[0]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I1_O)        0.124    15.605 r  player_2/do/c/_rotate/return[15]_i_44__2/O
+                         net (fo=1, routed)           0.763    16.368    player_2/do/c/_rotate/return[15]_i_44__2_n_0
+    SLICE_X29Y118        MUXF7 (Prop_muxf7_S_O)       0.276    16.644 f  player_2/do/c/_rotate/return_reg[15]_i_12__3/O
+                         net (fo=2, routed)           0.475    17.119    player_2/do/c/_rotate/return20_in
+    SLICE_X26Y120        LUT6 (Prop_lut6_I5_O)        0.299    17.418 r  player_2/do/c/_rotate/return[15]_i_5__5/O
+                         net (fo=16, routed)          0.755    18.173    player_2/do/c/_rotate/return[15]_i_5__5_n_0
+    SLICE_X26Y113        LUT5 (Prop_lut5_I0_O)        0.124    18.297 r  player_2/do/c/_rotate/return[8]_i_1__5/O
+                         net (fo=1, routed)           0.000    18.297    player_2/do/c/_rotate_n_9
+    SLICE_X26Y113        FDPE                                         r  player_2/do/c/return_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.607    14.948    player_2/do/c/clk_IBUF_BUFG
+    SLICE_X26Y113        FDPE                                         r  player_2/do/c/return_reg[8]/C
+                         clock pessimism              0.267    15.215    
+                         clock uncertainty           -0.035    15.180    
+    SLICE_X26Y113        FDPE (Setup_fdpe_C_D)        0.029    15.209    player_2/do/c/return_reg[8]
+  -------------------------------------------------------------------
+                         required time                         15.209    
+                         arrival time                         -18.297    
+  -------------------------------------------------------------------
+                         slack                                 -3.088    
+
+Slack (VIOLATED) :        -3.086ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[55]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        13.024ns  (logic 4.945ns (37.968%)  route 8.079ns (62.032%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=3 LUT5=2 LUT6=3 MUXF7=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.281    17.987    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X61Y53         LUT3 (Prop_lut3_I0_O)        0.124    18.111 r  player_1/do/type_1/_rotate/map[55]_i_1__0/O
+                         net (fo=1, routed)           0.000    18.111    player_1/do/type_1/_rotate_n_146
+    SLICE_X61Y53         FDCE                                         r  player_1/do/type_1/map_reg[55]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.508    14.849    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X61Y53         FDCE                                         r  player_1/do/type_1/map_reg[55]/C
+                         clock pessimism              0.180    15.029    
+                         clock uncertainty           -0.035    14.993    
+    SLICE_X61Y53         FDCE (Setup_fdce_C_D)        0.032    15.025    player_1/do/type_1/map_reg[55]
+  -------------------------------------------------------------------
+                         required time                         15.025    
+                         arrival time                         -18.111    
+  -------------------------------------------------------------------
+                         slack                                 -3.086    
+
+Slack (VIOLATED) :        -3.005ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[103]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        13.029ns  (logic 4.945ns (37.952%)  route 8.084ns (62.048%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=3 LUT5=2 LUT6=3 MUXF7=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.858ns = ( 14.858 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.286    17.993    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X61Y42         LUT3 (Prop_lut3_I0_O)        0.124    18.117 r  player_1/do/type_1/_rotate/map[103]_i_1__0/O
+                         net (fo=1, routed)           0.000    18.117    player_1/do/type_1/_rotate_n_98
+    SLICE_X61Y42         FDCE                                         r  player_1/do/type_1/map_reg[103]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.517    14.858    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X61Y42         FDCE                                         r  player_1/do/type_1/map_reg[103]/C
+                         clock pessimism              0.260    15.118    
+                         clock uncertainty           -0.035    15.083    
+    SLICE_X61Y42         FDCE (Setup_fdce_C_D)        0.029    15.112    player_1/do/type_1/map_reg[103]
+  -------------------------------------------------------------------
+                         required time                         15.112    
+                         arrival time                         -18.117    
+  -------------------------------------------------------------------
+                         slack                                 -3.005    
+
+Slack (VIOLATED) :        -3.001ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[46]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.938ns  (logic 4.945ns (38.219%)  route 7.993ns (61.781%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=2 LUT5=2 LUT6=4 MUXF7=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.195    17.902    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X61Y55         LUT6 (Prop_lut6_I0_O)        0.124    18.026 r  player_1/do/type_1/_rotate/map[46]_i_1__0/O
+                         net (fo=1, routed)           0.000    18.026    player_1/do/type_1/_rotate_n_155
+    SLICE_X61Y55         FDCE                                         r  player_1/do/type_1/map_reg[46]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.508    14.849    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X61Y55         FDCE                                         r  player_1/do/type_1/map_reg[46]/C
+                         clock pessimism              0.180    15.029    
+                         clock uncertainty           -0.035    14.993    
+    SLICE_X61Y55         FDCE (Setup_fdce_C_D)        0.032    15.025    player_1/do/type_1/map_reg[46]
+  -------------------------------------------------------------------
+                         required time                         15.025    
+                         arrival time                         -18.026    
+  -------------------------------------------------------------------
+                         slack                                 -3.001    
+
+Slack (VIOLATED) :        -2.997ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[151]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.933ns  (logic 4.945ns (38.234%)  route 7.988ns (61.766%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=3 LUT5=2 LUT6=3 MUXF7=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.190    17.897    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X61Y55         LUT3 (Prop_lut3_I0_O)        0.124    18.021 r  player_1/do/type_1/_rotate/map[151]_i_1__0/O
+                         net (fo=1, routed)           0.000    18.021    player_1/do/type_1/_rotate_n_50
+    SLICE_X61Y55         FDCE                                         r  player_1/do/type_1/map_reg[151]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.508    14.849    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X61Y55         FDCE                                         r  player_1/do/type_1/map_reg[151]/C
+                         clock pessimism              0.180    15.029    
+                         clock uncertainty           -0.035    14.993    
+    SLICE_X61Y55         FDCE (Setup_fdce_C_D)        0.031    15.024    player_1/do/type_1/map_reg[151]
+  -------------------------------------------------------------------
+                         required time                         15.024    
+                         arrival time                         -18.021    
+  -------------------------------------------------------------------
+                         slack                                 -2.997    
+
+Slack (VIOLATED) :        -2.992ns  (required time - arrival time)
+  Source:                 player_2/do/Piece_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/c/return_reg[6]/D
+                            (rising edge-triggered cell FDPE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.937ns  (logic 5.548ns (42.885%)  route 7.389ns (57.115%))
+  Logic Levels:           17  (CARRY4=8 LUT1=1 LUT2=2 LUT3=1 LUT4=1 LUT5=1 LUT6=2 MUXF7=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.941ns = ( 14.941 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.257ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.736     5.257    player_2/do/clk_IBUF_BUFG
+    SLICE_X14Y112        FDCE                                         r  player_2/do/Piece_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y112        FDCE (Prop_fdce_C_Q)         0.478     5.735 r  player_2/do/Piece_reg[13]/Q
+                         net (fo=87, routed)          0.834     6.569    player_2/do/currentPiece[13]
+    SLICE_X14Y110        LUT3 (Prop_lut3_I2_O)        0.295     6.864 r  player_2/do/return5_carry__2_i_4__0/O
+                         net (fo=18, routed)          0.943     7.807    player_2/do/Piece_reg[10]_2[0]
+    SLICE_X20Y113        CARRY4 (Prop_carry4_DI[0]_O[2])
+                                                      0.556     8.363 r  player_2/do/return_reg[15]_i_570__0/O[2]
+                         net (fo=3, routed)           1.243     9.606    player_2/do/Piece_reg[10]_3[2]
+    SLICE_X25Y113        LUT2 (Prop_lut2_I0_O)        0.330     9.936 r  player_2/do/return[15]_i_561__2/O
+                         net (fo=1, routed)           0.477    10.413    player_2/do/return[15]_i_561__2_n_0
+    SLICE_X29Y113        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.587    11.000 r  player_2/do/return_reg[15]_i_535__0/CO[3]
+                         net (fo=1, routed)           0.000    11.000    player_2/do/return_reg[15]_i_535__0_n_0
+    SLICE_X29Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.114 r  player_2/do/return_reg[15]_i_495__1/CO[3]
+                         net (fo=1, routed)           0.000    11.114    player_2/do/return_reg[15]_i_495__1_n_0
+    SLICE_X29Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.228 r  player_2/do/return_reg[15]_i_464__0/CO[3]
+                         net (fo=1, routed)           0.000    11.228    player_2/do/return_reg[15]_i_464__0_n_0
+    SLICE_X29Y116        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.342 r  player_2/do/return_reg[15]_i_445__1/CO[3]
+                         net (fo=1, routed)           0.000    11.342    player_2/do/return_reg[15]_i_445__1_n_0
+    SLICE_X29Y117        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.676 f  player_2/do/return_reg[15]_i_433__1/O[1]
+                         net (fo=1, routed)           0.496    12.172    player_2_n_74
+    SLICE_X32Y117        LUT1 (Prop_lut1_I0_O)        0.303    12.475 r  return[15]_i_432__2/O
+                         net (fo=1, routed)           0.000    12.475    return[15]_i_432__2_n_0
+    SLICE_X32Y117        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640    13.115 r  return_reg[15]_i_418__0/O[3]
+                         net (fo=1, routed)           0.442    13.557    player_2/do/c/return_reg[15]_i_260__0_1[3]
+    SLICE_X31Y117        LUT2 (Prop_lut2_I1_O)        0.306    13.863 r  player_2/do/c/return[15]_i_348__6/O
+                         net (fo=1, routed)           0.000    13.863    player_2/do/c/return[15]_i_348__6_n_0
+    SLICE_X31Y117        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248    14.111 r  player_2/do/c/return_reg[15]_i_260__0/O[3]
+                         net (fo=5, routed)           0.468    14.579    player_2/do/c/return_reg[15]_i_260__0_n_4
+    SLICE_X30Y117        LUT4 (Prop_lut4_I0_O)        0.306    14.885 r  player_2/do/c/return[15]_i_121__4/O
+                         net (fo=1, routed)           0.596    15.481    player_2/do/c/_rotate/return4[0]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I1_O)        0.124    15.605 r  player_2/do/c/_rotate/return[15]_i_44__2/O
+                         net (fo=1, routed)           0.763    16.368    player_2/do/c/_rotate/return[15]_i_44__2_n_0
+    SLICE_X29Y118        MUXF7 (Prop_muxf7_S_O)       0.276    16.644 f  player_2/do/c/_rotate/return_reg[15]_i_12__3/O
+                         net (fo=2, routed)           0.475    17.119    player_2/do/c/_rotate/return20_in
+    SLICE_X26Y120        LUT6 (Prop_lut6_I5_O)        0.299    17.418 r  player_2/do/c/_rotate/return[15]_i_5__5/O
+                         net (fo=16, routed)          0.652    18.070    player_2/do/c/_rotate/return[15]_i_5__5_n_0
+    SLICE_X29Y120        LUT5 (Prop_lut5_I0_O)        0.124    18.194 r  player_2/do/c/_rotate/return[6]_i_1__5/O
+                         net (fo=1, routed)           0.000    18.194    player_2/do/c/_rotate_n_10
+    SLICE_X29Y120        FDPE                                         r  player_2/do/c/return_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.600    14.941    player_2/do/c/clk_IBUF_BUFG
+    SLICE_X29Y120        FDPE                                         r  player_2/do/c/return_reg[6]/C
+                         clock pessimism              0.267    15.208    
+                         clock uncertainty           -0.035    15.173    
+    SLICE_X29Y120        FDPE (Setup_fdpe_C_D)        0.029    15.202    player_2/do/c/return_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.202    
+                         arrival time                         -18.194    
+  -------------------------------------------------------------------
+                         slack                                 -2.992    
+
+Slack (VIOLATED) :        -2.961ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.900ns  (logic 4.945ns (38.333%)  route 7.955ns (61.667%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=2 LUT5=2 LUT6=4 MUXF7=1)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.156    17.863    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X62Y56         LUT6 (Prop_lut6_I0_O)        0.124    17.987 r  player_1/do/type_1/_rotate/map[4]_i_1__0/O
+                         net (fo=1, routed)           0.000    17.987    player_1/do/type_1/_rotate_n_197
+    SLICE_X62Y56         FDCE                                         r  player_1/do/type_1/map_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.509    14.850    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X62Y56         FDCE                                         r  player_1/do/type_1/map_reg[4]/C
+                         clock pessimism              0.180    15.030    
+                         clock uncertainty           -0.035    14.994    
+    SLICE_X62Y56         FDCE (Setup_fdce_C_D)        0.032    15.026    player_1/do/type_1/map_reg[4]
+  -------------------------------------------------------------------
+                         required time                         15.026    
+                         arrival time                         -17.987    
+  -------------------------------------------------------------------
+                         slack                                 -2.961    
+
+Slack (VIOLATED) :        -2.959ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[32]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.894ns  (logic 4.945ns (38.352%)  route 7.949ns (61.648%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=2 LUT5=2 LUT6=4 MUXF7=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.150    17.857    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X58Y53         LUT6 (Prop_lut6_I0_O)        0.124    17.981 r  player_1/do/type_1/_rotate/map[32]_i_1__0/O
+                         net (fo=1, routed)           0.000    17.981    player_1/do/type_1/_rotate_n_169
+    SLICE_X58Y53         FDCE                                         r  player_1/do/type_1/map_reg[32]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.508    14.849    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X58Y53         FDCE                                         r  player_1/do/type_1/map_reg[32]/C
+                         clock pessimism              0.180    15.029    
+                         clock uncertainty           -0.035    14.993    
+    SLICE_X58Y53         FDCE (Setup_fdce_C_D)        0.029    15.022    player_1/do/type_1/map_reg[32]
+  -------------------------------------------------------------------
+                         required time                         15.022    
+                         arrival time                         -17.981    
+  -------------------------------------------------------------------
+                         slack                                 -2.959    
+
+Slack (VIOLATED) :        -2.941ns  (required time - arrival time)
+  Source:                 player_2/do/Piece_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/c/return_reg[7]/D
+                            (rising edge-triggered cell FDPE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.888ns  (logic 5.548ns (43.049%)  route 7.340ns (56.951%))
+  Logic Levels:           17  (CARRY4=8 LUT1=1 LUT2=2 LUT3=1 LUT4=1 LUT6=3 MUXF7=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.941ns = ( 14.941 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.257ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.736     5.257    player_2/do/clk_IBUF_BUFG
+    SLICE_X14Y112        FDCE                                         r  player_2/do/Piece_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y112        FDCE (Prop_fdce_C_Q)         0.478     5.735 r  player_2/do/Piece_reg[13]/Q
+                         net (fo=87, routed)          0.834     6.569    player_2/do/currentPiece[13]
+    SLICE_X14Y110        LUT3 (Prop_lut3_I2_O)        0.295     6.864 r  player_2/do/return5_carry__2_i_4__0/O
+                         net (fo=18, routed)          0.943     7.807    player_2/do/Piece_reg[10]_2[0]
+    SLICE_X20Y113        CARRY4 (Prop_carry4_DI[0]_O[2])
+                                                      0.556     8.363 r  player_2/do/return_reg[15]_i_570__0/O[2]
+                         net (fo=3, routed)           1.243     9.606    player_2/do/Piece_reg[10]_3[2]
+    SLICE_X25Y113        LUT2 (Prop_lut2_I0_O)        0.330     9.936 r  player_2/do/return[15]_i_561__2/O
+                         net (fo=1, routed)           0.477    10.413    player_2/do/return[15]_i_561__2_n_0
+    SLICE_X29Y113        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.587    11.000 r  player_2/do/return_reg[15]_i_535__0/CO[3]
+                         net (fo=1, routed)           0.000    11.000    player_2/do/return_reg[15]_i_535__0_n_0
+    SLICE_X29Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.114 r  player_2/do/return_reg[15]_i_495__1/CO[3]
+                         net (fo=1, routed)           0.000    11.114    player_2/do/return_reg[15]_i_495__1_n_0
+    SLICE_X29Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.228 r  player_2/do/return_reg[15]_i_464__0/CO[3]
+                         net (fo=1, routed)           0.000    11.228    player_2/do/return_reg[15]_i_464__0_n_0
+    SLICE_X29Y116        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.342 r  player_2/do/return_reg[15]_i_445__1/CO[3]
+                         net (fo=1, routed)           0.000    11.342    player_2/do/return_reg[15]_i_445__1_n_0
+    SLICE_X29Y117        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.676 f  player_2/do/return_reg[15]_i_433__1/O[1]
+                         net (fo=1, routed)           0.496    12.172    player_2_n_74
+    SLICE_X32Y117        LUT1 (Prop_lut1_I0_O)        0.303    12.475 r  return[15]_i_432__2/O
+                         net (fo=1, routed)           0.000    12.475    return[15]_i_432__2_n_0
+    SLICE_X32Y117        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640    13.115 r  return_reg[15]_i_418__0/O[3]
+                         net (fo=1, routed)           0.442    13.557    player_2/do/c/return_reg[15]_i_260__0_1[3]
+    SLICE_X31Y117        LUT2 (Prop_lut2_I1_O)        0.306    13.863 r  player_2/do/c/return[15]_i_348__6/O
+                         net (fo=1, routed)           0.000    13.863    player_2/do/c/return[15]_i_348__6_n_0
+    SLICE_X31Y117        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248    14.111 r  player_2/do/c/return_reg[15]_i_260__0/O[3]
+                         net (fo=5, routed)           0.468    14.579    player_2/do/c/return_reg[15]_i_260__0_n_4
+    SLICE_X30Y117        LUT4 (Prop_lut4_I0_O)        0.306    14.885 r  player_2/do/c/return[15]_i_121__4/O
+                         net (fo=1, routed)           0.596    15.481    player_2/do/c/_rotate/return4[0]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I1_O)        0.124    15.605 r  player_2/do/c/_rotate/return[15]_i_44__2/O
+                         net (fo=1, routed)           0.763    16.368    player_2/do/c/_rotate/return[15]_i_44__2_n_0
+    SLICE_X29Y118        MUXF7 (Prop_muxf7_S_O)       0.276    16.644 f  player_2/do/c/_rotate/return_reg[15]_i_12__3/O
+                         net (fo=2, routed)           0.308    16.952    player_2/do/c/_rotate/return20_in
+    SLICE_X29Y120        LUT6 (Prop_lut6_I5_O)        0.299    17.251 r  player_2/do/c/_rotate/return[15]_i_3__5/O
+                         net (fo=4, routed)           0.770    18.021    player_2/do/c/_rotate/return[15]_i_3__5_n_0
+    SLICE_X26Y121        LUT6 (Prop_lut6_I1_O)        0.124    18.145 r  player_2/do/c/_rotate/return[7]_i_1__5/O
+                         net (fo=1, routed)           0.000    18.145    player_2/do/c/_rotate_n_2
+    SLICE_X26Y121        FDPE                                         r  player_2/do/c/return_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.600    14.941    player_2/do/c/clk_IBUF_BUFG
+    SLICE_X26Y121        FDPE                                         r  player_2/do/c/return_reg[7]/C
+                         clock pessimism              0.267    15.208    
+                         clock uncertainty           -0.035    15.173    
+    SLICE_X26Y121        FDPE (Setup_fdpe_C_D)        0.031    15.204    player_2/do/c/return_reg[7]
+  -------------------------------------------------------------------
+                         required time                         15.204    
+                         arrival time                         -18.145    
+  -------------------------------------------------------------------
+                         slack                                 -2.941    
+
+Slack (VIOLATED) :        -2.917ns  (required time - arrival time)
+  Source:                 player_1/do/Piece_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/type_1/map_reg[76]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.902ns  (logic 4.945ns (38.328%)  route 7.957ns (61.672%))
+  Logic Levels:           16  (CARRY4=6 LUT2=1 LUT3=2 LUT5=2 LUT6=4 MUXF7=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.566     5.087    player_1/do/clk_IBUF_BUFG
+    SLICE_X57Y35         FDCE                                         r  player_1/do/Piece_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y35         FDCE (Prop_fdce_C_Q)         0.419     5.506 r  player_1/do/Piece_reg[18]/Q
+                         net (fo=69, routed)          1.109     6.615    player_1/do/currentPiece[18]
+    SLICE_X54Y42         LUT3 (Prop_lut3_I1_O)        0.299     6.914 r  player_1/do/return5_carry__4_i_4/O
+                         net (fo=12, routed)          0.837     7.751    player_1/do/Piece_reg[18]_1[0]
+    SLICE_X58Y37         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.277 r  player_1/do/map_reg[199]_i_311/CO[3]
+                         net (fo=1, routed)           0.000     8.277    player_1/do/map_reg[199]_i_311_n_0
+    SLICE_X58Y38         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.516 r  player_1/do/map_reg[199]_i_291/O[2]
+                         net (fo=3, routed)           0.778     9.294    player_1/do/map_reg[199]_i_291_n_5
+    SLICE_X65Y40         LUT3 (Prop_lut3_I0_O)        0.302     9.596 r  player_1/do/map[199]_i_308/O
+                         net (fo=3, routed)           0.426    10.022    player_1/do/map[199]_i_308_n_0
+    SLICE_X65Y40         LUT5 (Prop_lut5_I1_O)        0.124    10.146 r  player_1/do/map[199]_i_278/O
+                         net (fo=2, routed)           0.675    10.821    player_1/do/map[199]_i_278_n_0
+    SLICE_X64Y40         LUT6 (Prop_lut6_I0_O)        0.124    10.945 r  player_1/do/map[199]_i_282/O
+                         net (fo=1, routed)           0.000    10.945    player_1/do/map[199]_i_282_n_0
+    SLICE_X64Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.321 r  player_1/do/map_reg[199]_i_266/CO[3]
+                         net (fo=1, routed)           0.000    11.321    player_1/do/map_reg[199]_i_266_n_0
+    SLICE_X64Y41         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.540 r  player_1/do/map_reg[199]_i_262/O[0]
+                         net (fo=2, routed)           0.325    11.866    player_1_n_39
+    SLICE_X64Y42         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.722    12.588 r  map_reg[199]_i_207/O[1]
+                         net (fo=1, routed)           0.621    13.209    player_1/do/type_1/map_reg[199]_i_74_1[1]
+    SLICE_X62Y40         LUT2 (Prop_lut2_I1_O)        0.306    13.515 r  player_1/do/type_1/map[199]_i_147__0/O
+                         net (fo=1, routed)           0.000    13.515    player_1/do/type_1/map[199]_i_147__0_n_0
+    SLICE_X62Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    13.742 r  player_1/do/type_1/map_reg[199]_i_74/O[1]
+                         net (fo=4, routed)           1.049    14.791    player_1/do/type_1/_rotate/map[199]_i_17_0[1]
+    SLICE_X61Y39         LUT6 (Prop_lut6_I2_O)        0.303    15.094 r  player_1/do/type_1/_rotate/map[199]_i_75__0/O
+                         net (fo=2, routed)           0.659    15.753    player_1/do/type_1/_rotate/map[199]_i_75__0_n_0
+    SLICE_X60Y48         LUT6 (Prop_lut6_I0_O)        0.124    15.877 r  player_1/do/type_1/_rotate/map[199]_i_18/O
+                         net (fo=1, routed)           0.000    15.877    player_1/do/type_1/_rotate/map[199]_i_18_n_0
+    SLICE_X60Y48         MUXF7 (Prop_muxf7_I1_O)      0.214    16.091 r  player_1/do/type_1/_rotate/map_reg[199]_i_6/O
+                         net (fo=1, routed)           0.319    16.410    player_1/do/type_1/_rotate/map_reg[199]_i_6_n_0
+    SLICE_X63Y49         LUT5 (Prop_lut5_I4_O)        0.297    16.707 r  player_1/do/type_1/_rotate/map[199]_i_2/O
+                         net (fo=200, routed)         1.158    17.865    player_1/do/type_1/_rotate/p_1_in[199]
+    SLICE_X60Y54         LUT6 (Prop_lut6_I0_O)        0.124    17.989 r  player_1/do/type_1/_rotate/map[76]_i_1__0/O
+                         net (fo=1, routed)           0.000    17.989    player_1/do/type_1/_rotate_n_125
+    SLICE_X60Y54         FDCE                                         r  player_1/do/type_1/map_reg[76]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        1.508    14.849    player_1/do/type_1/clk_IBUF_BUFG
+    SLICE_X60Y54         FDCE                                         r  player_1/do/type_1/map_reg[76]/C
+                         clock pessimism              0.180    15.029    
+                         clock uncertainty           -0.035    14.993    
+    SLICE_X60Y54         FDCE (Setup_fdce_C_D)        0.079    15.072    player_1/do/type_1/map_reg[76]
+  -------------------------------------------------------------------
+                         required time                         15.072    
+                         arrival time                         -17.989    
+  -------------------------------------------------------------------
+                         slack                                 -2.917    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.071ns  (arrival time - required time)
+  Source:                 player_2/do/cldm/map_reg[33]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/_map_reg[33]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.439ns  (logic 0.189ns (43.093%)  route 0.250ns (56.907%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.034ns
+    Source Clock Delay      (SCD):    1.520ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.636     1.520    player_2/do/cldm/clk_IBUF_BUFG
+    SLICE_X40Y118        FDCE                                         r  player_2/do/cldm/map_reg[33]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y118        FDCE (Prop_fdce_C_Q)         0.141     1.661 r  player_2/do/cldm/map_reg[33]/Q
+                         net (fo=4, routed)           0.250     1.910    player_2/sign/clear_line_drop_map[33]
+    SLICE_X33Y119        LUT3 (Prop_lut3_I2_O)        0.048     1.958 r  player_2/sign/_map[33]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.958    player_2/do/D[33]
+    SLICE_X33Y119        FDCE                                         r  player_2/do/_map_reg[33]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.906     2.034    player_2/do/clk_IBUF_BUFG
+    SLICE_X33Y119        FDCE                                         r  player_2/do/_map_reg[33]/C
+                         clock pessimism             -0.253     1.780    
+    SLICE_X33Y119        FDCE (Hold_fdce_C_D)         0.107     1.887    player_2/do/_map_reg[33]
+  -------------------------------------------------------------------
+                         required time                         -1.887    
+                         arrival time                           1.958    
+  -------------------------------------------------------------------
+                         slack                                  0.071    
+
+Slack (MET) :             0.084ns  (arrival time - required time)
+  Source:                 player_2/do/type_1/map_reg[180]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/cldm/detect_now_input_map_reg[180]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.438ns  (logic 0.186ns (42.500%)  route 0.252ns (57.500%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.038ns
+    Source Clock Delay      (SCD):    1.522ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.638     1.522    player_2/do/type_1/clk_IBUF_BUFG
+    SLICE_X35Y114        FDCE                                         r  player_2/do/type_1/map_reg[180]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y114        FDCE (Prop_fdce_C_Q)         0.141     1.663 r  player_2/do/type_1/map_reg[180]/Q
+                         net (fo=3, routed)           0.252     1.914    player_2/do/type_1/merge_map[180]
+    SLICE_X39Y115        LUT2 (Prop_lut2_I1_O)        0.045     1.959 r  player_2/do/type_1/detect_now_input_map[180]_i_1__0/O
+                         net (fo=2, routed)           0.000     1.959    player_2/do/cldm/D[180]
+    SLICE_X39Y115        FDCE                                         r  player_2/do/cldm/detect_now_input_map_reg[180]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.910     2.038    player_2/do/cldm/clk_IBUF_BUFG
+    SLICE_X39Y115        FDCE                                         r  player_2/do/cldm/detect_now_input_map_reg[180]/C
+                         clock pessimism             -0.253     1.784    
+    SLICE_X39Y115        FDCE (Hold_fdce_C_D)         0.091     1.875    player_2/do/cldm/detect_now_input_map_reg[180]
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.959    
+  -------------------------------------------------------------------
+                         slack                                  0.084    
+
+Slack (MET) :             0.092ns  (arrival time - required time)
+  Source:                 player_1/do/cldm/map_reg[179]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_1/do/_map_reg[179]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.485ns  (logic 0.212ns (43.720%)  route 0.273ns (56.280%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.946ns
+    Source Clock Delay      (SCD):    1.435ns
+    Clock Pessimism Removal (CPR):    0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.552     1.435    player_1/do/cldm/clk_IBUF_BUFG
+    SLICE_X34Y22         FDCE                                         r  player_1/do/cldm/map_reg[179]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X34Y22         FDCE (Prop_fdce_C_Q)         0.164     1.599 r  player_1/do/cldm/map_reg[179]/Q
+                         net (fo=4, routed)           0.273     1.872    player_1/sign/clear_line_drop_map[179]
+    SLICE_X38Y27         LUT3 (Prop_lut3_I2_O)        0.048     1.920 r  player_1/sign/_map[179]_i_1/O
+                         net (fo=1, routed)           0.000     1.920    player_1/do/D[179]
+    SLICE_X38Y27         FDCE                                         r  player_1/do/_map_reg[179]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.819     1.946    player_1/do/clk_IBUF_BUFG
+    SLICE_X38Y27         FDCE                                         r  player_1/do/_map_reg[179]/C
+                         clock pessimism             -0.249     1.697    
+    SLICE_X38Y27         FDCE (Hold_fdce_C_D)         0.131     1.828    player_1/do/_map_reg[179]
+  -------------------------------------------------------------------
+                         required time                         -1.828    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.092    
+
+Slack (MET) :             0.093ns  (arrival time - required time)
+  Source:                 player_2/do/cldm/map_reg[50]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/_map_reg[50]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.475ns  (logic 0.186ns (39.123%)  route 0.289ns (60.877%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.034ns
+    Source Clock Delay      (SCD):    1.519ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.635     1.519    player_2/do/cldm/clk_IBUF_BUFG
+    SLICE_X41Y119        FDCE                                         r  player_2/do/cldm/map_reg[50]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y119        FDCE (Prop_fdce_C_Q)         0.141     1.660 r  player_2/do/cldm/map_reg[50]/Q
+                         net (fo=4, routed)           0.289     1.949    player_2/sign/clear_line_drop_map[50]
+    SLICE_X34Y119        LUT3 (Prop_lut3_I2_O)        0.045     1.994 r  player_2/sign/_map[50]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.994    player_2/do/D[50]
+    SLICE_X34Y119        FDCE                                         r  player_2/do/_map_reg[50]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.906     2.034    player_2/do/clk_IBUF_BUFG
+    SLICE_X34Y119        FDCE                                         r  player_2/do/_map_reg[50]/C
+                         clock pessimism             -0.253     1.780    
+    SLICE_X34Y119        FDCE (Hold_fdce_C_D)         0.121     1.901    player_2/do/_map_reg[50]
+  -------------------------------------------------------------------
+                         required time                         -1.901    
+                         arrival time                           1.994    
+  -------------------------------------------------------------------
+                         slack                                  0.093    
+
+Slack (MET) :             0.097ns  (arrival time - required time)
+  Source:                 key_de/inst/tx_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            key_de/inst/Ps2Interface_i/frame_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.465ns  (logic 0.213ns (45.842%)  route 0.252ns (54.158%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.952ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.559     1.442    key_de/inst/clk_IBUF_BUFG
+    SLICE_X38Y88         FDCE                                         r  key_de/inst/tx_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y88         FDCE (Prop_fdce_C_Q)         0.164     1.606 r  key_de/inst/tx_valid_reg/Q
+                         net (fo=15, routed)          0.252     1.858    key_de/inst/Ps2Interface_i/FSM_onehot_state_reg[3]_0
+    SLICE_X35Y87         LUT4 (Prop_lut4_I1_O)        0.049     1.907 r  key_de/inst/Ps2Interface_i/frame[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.907    key_de/inst/Ps2Interface_i/p_1_in__0[2]
+    SLICE_X35Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/frame_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.824     1.952    key_de/inst/Ps2Interface_i/clk_IBUF_BUFG
+    SLICE_X35Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/frame_reg[2]/C
+                         clock pessimism             -0.249     1.703    
+    SLICE_X35Y87         FDCE (Hold_fdce_C_D)         0.107     1.810    key_de/inst/Ps2Interface_i/frame_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.810    
+                         arrival time                           1.907    
+  -------------------------------------------------------------------
+                         slack                                  0.097    
+
+Slack (MET) :             0.097ns  (arrival time - required time)
+  Source:                 player_2/do/type_1/map_reg[106]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/cldm/map_reg[106]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.451ns  (logic 0.186ns (41.265%)  route 0.265ns (58.735%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.038ns
+    Source Clock Delay      (SCD):    1.522ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.638     1.522    player_2/do/type_1/clk_IBUF_BUFG
+    SLICE_X35Y113        FDCE                                         r  player_2/do/type_1/map_reg[106]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y113        FDCE (Prop_fdce_C_Q)         0.141     1.663 r  player_2/do/type_1/map_reg[106]/Q
+                         net (fo=5, routed)           0.265     1.927    player_2/do/cldm/merge_map[21]
+    SLICE_X40Y115        LUT6 (Prop_lut6_I1_O)        0.045     1.972 r  player_2/do/cldm/map[106]_i_1__1/O
+                         net (fo=1, routed)           0.000     1.972    player_2/do/cldm/map[106]_i_1__1_n_0
+    SLICE_X40Y115        FDCE                                         r  player_2/do/cldm/map_reg[106]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.910     2.038    player_2/do/cldm/clk_IBUF_BUFG
+    SLICE_X40Y115        FDCE                                         r  player_2/do/cldm/map_reg[106]/C
+                         clock pessimism             -0.253     1.784    
+    SLICE_X40Y115        FDCE (Hold_fdce_C_D)         0.091     1.875    player_2/do/cldm/map_reg[106]
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.972    
+  -------------------------------------------------------------------
+                         slack                                  0.097    
+
+Slack (MET) :             0.107ns  (arrival time - required time)
+  Source:                 key_de/inst/Ps2Interface_i/err_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            key_de/inst/FSM_sequential_state_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.492ns  (logic 0.231ns (46.917%)  route 0.261ns (53.083%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.955ns
+    Source Clock Delay      (SCD):    1.441ns
+    Clock Pessimism Removal (CPR):    0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.558     1.441    key_de/inst/Ps2Interface_i/clk_IBUF_BUFG
+    SLICE_X35Y88         FDCE                                         r  key_de/inst/Ps2Interface_i/err_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y88         FDCE (Prop_fdce_C_Q)         0.141     1.582 f  key_de/inst/Ps2Interface_i/err_reg/Q
+                         net (fo=3, routed)           0.207     1.790    key_de/inst/Ps2Interface_i/err_reg_n_0
+    SLICE_X38Y88         LUT6 (Prop_lut6_I0_O)        0.045     1.835 r  key_de/inst/Ps2Interface_i/FSM_sequential_state[1]_i_2/O
+                         net (fo=1, routed)           0.054     1.889    key_de/inst/Ps2Interface_i/FSM_sequential_state[1]_i_2_n_0
+    SLICE_X38Y88         LUT6 (Prop_lut6_I4_O)        0.045     1.934 r  key_de/inst/Ps2Interface_i/FSM_sequential_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.934    key_de/inst/Ps2Interface_i_n_4
+    SLICE_X38Y88         FDCE                                         r  key_de/inst/FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.827     1.955    key_de/inst/clk_IBUF_BUFG
+    SLICE_X38Y88         FDCE                                         r  key_de/inst/FSM_sequential_state_reg[1]/C
+                         clock pessimism             -0.249     1.706    
+    SLICE_X38Y88         FDCE (Hold_fdce_C_D)         0.121     1.827    key_de/inst/FSM_sequential_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.827    
+                         arrival time                           1.934    
+  -------------------------------------------------------------------
+                         slack                                  0.107    
+
+Slack (MET) :             0.108ns  (arrival time - required time)
+  Source:                 key_de/inst/tx_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            key_de/inst/Ps2Interface_i/frame_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.461ns  (logic 0.209ns (45.372%)  route 0.252ns (54.628%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.952ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.559     1.442    key_de/inst/clk_IBUF_BUFG
+    SLICE_X38Y88         FDCE                                         r  key_de/inst/tx_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y88         FDCE (Prop_fdce_C_Q)         0.164     1.606 r  key_de/inst/tx_valid_reg/Q
+                         net (fo=15, routed)          0.252     1.858    key_de/inst/Ps2Interface_i/FSM_onehot_state_reg[3]_0
+    SLICE_X35Y87         LUT4 (Prop_lut4_I1_O)        0.045     1.903 r  key_de/inst/Ps2Interface_i/frame[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.903    key_de/inst/Ps2Interface_i/p_1_in__0[1]
+    SLICE_X35Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/frame_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.824     1.952    key_de/inst/Ps2Interface_i/clk_IBUF_BUFG
+    SLICE_X35Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/frame_reg[1]/C
+                         clock pessimism             -0.249     1.703    
+    SLICE_X35Y87         FDCE (Hold_fdce_C_D)         0.092     1.795    key_de/inst/Ps2Interface_i/frame_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.795    
+                         arrival time                           1.903    
+  -------------------------------------------------------------------
+                         slack                                  0.108    
+
+Slack (MET) :             0.109ns  (arrival time - required time)
+  Source:                 player_2/do/type_1/map_reg[51]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            player_2/do/cldm/detect_now_input_map_reg[51]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.465ns  (logic 0.186ns (39.972%)  route 0.279ns (60.028%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.044ns
+    Source Clock Delay      (SCD):    1.526ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.642     1.526    player_2/do/type_1/clk_IBUF_BUFG
+    SLICE_X31Y107        FDCE                                         r  player_2/do/type_1/map_reg[51]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y107        FDCE (Prop_fdce_C_Q)         0.141     1.667 r  player_2/do/type_1/map_reg[51]/Q
+                         net (fo=3, routed)           0.279     1.946    player_2/do/type_1/merge_map[51]
+    SLICE_X39Y105        LUT2 (Prop_lut2_I1_O)        0.045     1.991 r  player_2/do/type_1/detect_now_input_map[51]_i_1__0/O
+                         net (fo=2, routed)           0.000     1.991    player_2/do/cldm/D[51]
+    SLICE_X39Y105        FDCE                                         r  player_2/do/cldm/detect_now_input_map_reg[51]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.916     2.044    player_2/do/cldm/clk_IBUF_BUFG
+    SLICE_X39Y105        FDCE                                         r  player_2/do/cldm/detect_now_input_map_reg[51]/C
+                         clock pessimism             -0.253     1.790    
+    SLICE_X39Y105        FDCE (Hold_fdce_C_D)         0.092     1.882    player_2/do/cldm/detect_now_input_map_reg[51]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           1.991    
+  -------------------------------------------------------------------
+                         slack                                  0.109    
+
+Slack (MET) :             0.110ns  (arrival time - required time)
+  Source:                 key_de/inst/Ps2Interface_i/frame_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            key_de/inst/Ps2Interface_i/rx_data_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.392ns  (logic 0.128ns (32.660%)  route 0.264ns (67.340%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.953ns
+    Source Clock Delay      (SCD):    1.440ns
+    Clock Pessimism Removal (CPR):    0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.557     1.440    key_de/inst/Ps2Interface_i/clk_IBUF_BUFG
+    SLICE_X35Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/frame_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y87         FDCE (Prop_fdce_C_Q)         0.128     1.568 r  key_de/inst/Ps2Interface_i/frame_reg[8]/Q
+                         net (fo=3, routed)           0.264     1.832    key_de/inst/Ps2Interface_i/p_0_in[7]
+    SLICE_X36Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/rx_data_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=3662, routed)        0.825     1.953    key_de/inst/Ps2Interface_i/clk_IBUF_BUFG
+    SLICE_X36Y87         FDCE                                         r  key_de/inst/Ps2Interface_i/rx_data_reg[7]/C
+                         clock pessimism             -0.249     1.704    
+    SLICE_X36Y87         FDCE (Hold_fdce_C_D)         0.018     1.722    key_de/inst/Ps2Interface_i/rx_data_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.722    
+                         arrival time                           1.832    
+  -------------------------------------------------------------------
+                         slack                                  0.110    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X65Y35   player_1/do/Piece_reg[1]_replica/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X49Y39   player_1/do/Piece_reg[1]_replica_1/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X57Y33   player_1/do/Piece_reg[1]_replica_2/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X49Y35   player_1/do/Piece_reg[1]_replica_3/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X13Y90   player_1/sign/time_limit_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X11Y91   player_1/sign/time_limit_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X12Y82   player_2/sign/time_limit_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X9Y84    player_2/sign/time_limit_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X47Y34   player_1/do/Piece_reg[1]_replica_4/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X20Y130  player_2/do/PosX_reg[1]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X30Y138  player_2/do/PosY_reg[0]_rep__0/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y115  player_2/do/_map_reg[10]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y115  player_2/do/_map_reg[11]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X23Y129  player_2/do/_map_reg[128]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X23Y129  player_2/do/_map_reg[129]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y133  player_2/do/_map_reg[136]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y133  player_2/do/_map_reg[137]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y133  player_2/do/_map_reg[138]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y133  player_2/do/_map_reg[139]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X13Y90   player_1/sign/time_limit_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X11Y91   player_1/sign/time_limit_reg[10]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X47Y34   player_1/do/Piece_reg[1]_replica_4/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X47Y34   player_1/do/Piece_reg[1]_replica_4/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X61Y33   player_1/do/Piece_reg[1]_replica_6/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X61Y34   player_1/do/Piece_reg[4]_replica_1/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X61Y34   player_1/do/Piece_reg[4]_replica_1/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X53Y37   player_1/do/Piece_reg[4]_replica_2/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X45Y34   player_1/do/Piece_reg[4]_replica_4/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X45Y34   player_1/do/Piece_reg[4]_replica_4/C
+
+
+
